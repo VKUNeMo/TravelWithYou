@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#menu {
+    width: 100%;
+    height: 100px;
+    background: #e3e3e4;
+    margin: 50px auto;
+    display: flex;
+}
+
+#menu>.menu_item {
+    width: 95%;
+    height: 75%;
+    /* background: red; */
+    margin: auto;
+}
+
+#menu>.menu_item>.menu_item_img_logo {
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+
+#menu>.menu_item>.menu_item_list {
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+#menu>.menu_item>.menu_item_contact {
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+
+
+.menu_item ul {
+    background: #e3e3e4;
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* css cho li ở menu */
+.menu_item li {
+    margin: 5px;
+    font-size: 15px;
+    color: #333;
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu_item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.menu_item a:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    color: rgb(121, 204, 200);
+}
