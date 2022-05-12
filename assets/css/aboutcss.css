@@ -1,48 +1,219 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header{
-    width: 100%;
-    display: flex;
-    padding: 33px 0;
-    border: 1px solid #ccc;
+body {
+    font-family: "Rubik",
+        sans-serif;
+}
+
+#main {}
+
+#header {
+    height: 80px;
     position: relative;
 }
 
-.logo {
-    width: 170px;
+#content_header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 1px 3px 0px rgb(168 191 199);
 }
 
-.navbar {
-    width: 50%;
+#content_header>.logo {
+    display: inline-block;
+    float: left;
+    margin-left: -3px;
+
 }
-.navbar::before {
+
+.logo img {
+    height: 100px;
+    object-fit: cover;
+    object-position: 100% 45%;
+}
+
+#content_header .nav {
+    display: inline-block;
+    float: left;
+}
+
+.nav::before {
     position: absolute;
     left: 0;
-    height: 43px;
+    height: 49px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 1px;
-    background: #dfdcdc;
+    background: #efefef;
     content: '';
-    left: 16%;
+    left: 20%;
 }
-.navbar > ul > li {
+
+#content_header .nav li {
+    margin: 24px;
     display: inline-block;
+    font-family: "Rubik", sans-serif;
+    position: relative;
+    text-transform: capitalize;
 }
 
-.navbar > ul > li a {
+#content_header .nav li:hover a {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    color: #1EC6B6;
+}
+
+#content_header .nav li a,
+.contact a,
+.search-icon a {
+    color: #040E27;
     text-decoration: none;
-    padding: 10px 20px;
 }
 
-.subnav > li {
-    display:none;
+#content_header>.contact {
+    display: block;
+    float: left;
 }
 
+.arrow-down {
+    font-size: 10px;
+}
 
+.contact span {
+    padding: 0 5px;
+    border-right: 1px solid #EAEAEA;
 
+}
+
+.contact a {
+    padding: 10px;
+}
+
+#header #content_header .search-icon {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 30px;
+    background: #FF4A52;
+
+    font-size: 30px;
+    margin: auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#header #content_header .search-icon .search {
+    color: #f5d9d9;
+}
+
+.banner {
+    padding-top: 60px;
+    background-image: url(../img/wolfgang-hasselmann--UXVR8xThzc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    color: white;
+}
+
+.banner-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.banner .title {}
+
+.banner .title p {
+    margin: 20px 645px 0 0;
+}
+
+.banner .img-table {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+
+.img-table div {
+    width: 50%;
+    margin: 10px;
+}
+
+.img-table img {
+    width: 100%;
+    margin-bottom: 10px;
+    /*margin: 0 auto;*/
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 10px;
+}
+
+/* set height img 2*/
+.img-table .img2 {
+    height: 28vw;
+}
+
+.out-story {
+    background: #eaeaea00;
+    padding-top: 10px;
+}
+
+.out-story-container {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.out-story-container .container-img {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+.out-story-container div {
+    margin: 67px 0;
+}
+
+.out-story-container>div:first-child {
+    margin: 67px -100px;
+
+}
+
+.out-story-container .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.out-story-container .counter h3 {
+    font-size: 4em;
+    color: #ff4a52;
+    text-align: center;
+}
+
+.out-story-container .counter p {
+    color: #7a838b;
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 20px;
+    line-height: 28px;
+    text-align: center;
+}
