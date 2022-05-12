@@ -6,7 +6,7 @@
 
 body {
     font-family: "Rubik",
-    sans-serif;
+        sans-serif;
 }
 
 #main {}
@@ -79,10 +79,6 @@ body {
     color: #1EC6B6;
 }
 
-#content_header .nav li:last-child {
-    margin-right: 200px;
-}
-
 #content_header .nav li a,
 .contact a,
 .search-icon a {
@@ -143,12 +139,9 @@ body {
     margin: 0 auto;
 }
 
-.banner .title {
+.banner .title {}
 
-
-}
-
-.banner .title p{
+.banner .title p {
     margin: 20px 645px 0 0;
 }
 
@@ -173,6 +166,7 @@ body {
     object-position: 50% 50%;
     border-radius: 10px;
 }
+
 /* set height img 2*/
 .img-table .img2 {
     height: 28vw;
@@ -200,7 +194,7 @@ body {
     margin: 67px 0;
 }
 
-.out-story-container > div:first-child {
+.out-story-container>div:first-child {
     margin: 67px -100px;
 
 }
@@ -210,7 +204,7 @@ body {
     justify-content: space-around;
 }
 
-.out-story-container .counter h3{
+.out-story-container .counter h3 {
     font-size: 4em;
     color: #ff4a52;
     text-align: center;
@@ -224,6 +218,3 @@ body {
     line-height: 28px;
     text-align: center;
 }
-
-
-
