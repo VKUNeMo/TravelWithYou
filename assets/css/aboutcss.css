@@ -181,6 +181,7 @@ body {
 .out-story {
     background: #eaeaea00;
     padding-top: 10px;
+    background-image: url(../img/beach.jpg)
 }
 
 .out-story-container {
@@ -204,7 +205,7 @@ body {
 
 }
 
-.out-story-container .container {
+.out-story-container .counter {
     display: flex;
     justify-content: space-around;
 }
