@@ -109,14 +109,12 @@ body {
 }
 
 #header #content_header .search-icon {
-
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    padding: 0 30px;
+    padding: 0 25px;
     background: #FF4A52;
-
     font-size: 30px;
     margin: auto;
     display: flex;
@@ -171,14 +169,19 @@ body {
 
 /* Caption text */
 .text {
+
+    font-family: "Nothing You Could Do", cursive;
     color: #f2f2f2;
-    font-size: 15px;
+    text-transform: capitalize;
+    font-size: 120px;
+    font-weight: 400;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 300px;
     width: 100%;
     text-align: center;
 }
+
 
 
 /* The dots/bullets/indicators */
@@ -255,6 +258,15 @@ select {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 40px;
+}
+
+.search-btn .btn:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: #1ec6b6;
 }
 
 #popular {
@@ -341,5 +353,33 @@ select {
     width: 200px;
     border-radius: 5px;
     background-color: 0;
-    border: 1px solid #717171;
+    border: 1px solid #FF4A52;
+}
+
+.popular-content>.search-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#video {
+    margin-top: 100px;
+    height: 600px;
+    background-image: url(/assets/img/back_gr_video.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#video>.video-content {
+    display: block;
+}
+
+#video>.video-content a {
+    color: #1ec6b6;
+    text-align: center;
+    font-weight: 400;
+    font-size: 100px;
+    font-family: "Nothing You Could Do", cursive;
+    text-decoration: none;
 }
