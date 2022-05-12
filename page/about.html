@@ -7,46 +7,132 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/aboutcss.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons/themify-icons.css">
 </head>
 <body>
-    <div class="container">
-<!--        Thanh header-->
-        <div class="header">
-            <div class="logo">
-
+    <div id="main">
+        <div id="header">
+            <div id="content_header">
+                <div class="logo">
+                    <img src="../assets/img/TRAVELWY.png"
+                         alt="" width="300" height="300">
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="">Home </a></li>
+                        <li><a href="#">About </a></li>
+                        <li><a href="">Destination </a></li>
+                        <li><a href="">Pages
+                            <i class="arrow-down ti-angle-down"></i>
+                        </a></li>
+                        <li><a href="">Blog
+                            <i class="arrow-down ti-angle-down"></i>
+                        </a></li>
+                        <li><a href="">Contact </a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <span class="number">0862970457</span>
+                    <a href="#"><i class="contact-face ti-facebook"></i></a>
+                    <a href="#"><i class="contact-linked ti-linkedin"> </i> </a>
+                    <a href="#"><i class="contact-gg ti-google"> </i> </a>
+                    <a href="#"> <i class="contact-ins ti-instagram"></i> </a>
+                </div>
+                <div class="search-icon">
+                    <a href="#">
+                        <i class="search ti-search"> </i>
+                    </a>
+                </div>
             </div>
-
-            <div class="navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Destination</a></li>
-                    <li>
-                        <a href="#">Pages</a>
-                        <ul class="subnav">
-                            <li><a href="#">Destinations Details</a></li>
-                            <li><a href="#">Elements</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                        <ul class="subnav">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Single-Blog</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+        </div>
+        <div class="banner">
+            <div class="banner-container">
+                <div class="title">
+                    <h1>About us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci asperiores beatae dicta dolor doloribus explicabo harum id, in itaque libero maiores minima modi nostrum, numquam qui quisquam sunt vitae?</p>
+                </div>
+                <div class="img-table">
+                    <div class="col-1">
+                        <img src="../assets/img/img1.jpg" alt="">
+                    </div>
+                    <div class="col-2">
+                        <img class="img2" src="../assets/img/img2.jpg" alt="">
+                        <img src="../assets/img/img3.jpg" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="../assets/img/img4.jpg" alt="">
+                        <img src="../assets/img/img6.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img src="../assets/img/img7.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="contact">
+        </div>
+        <div class="out-story">
+            <div class="out-story-container">
+                <div class="head">
+                    <h1>Our story</h1>
+                </div>
+                <div class="paragraph">
+                    <p>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci eaque error, et eum fugiat id illo in, necessitatibus tempore, temporibus unde vel veniam. Fugit, maxime nostrum. Debitis, ipsum, temporibus?</span><span>Consequuntur culpa debitis deserunt et libero mollitia numquam obcaecati quisquam reprehenderit temporibus velit, vero. Autem cupiditate doloremque enim ex harum iste libero necessitatibus temporibus, tenetur. Aliquid natus provident quam tenetur.</span><span>Adipisci aperiam dicta dolor earum eligendi minima molestias nemo quis sequi soluta! Ea fuga maxime natus obcaecati placeat totam veritatis. Dignissimos earum facilis fuga iusto optio quas ratione sint vitae?</span><span>Beatae doloribus ea exercitationem inventore laudantium magnam molestias, mollitia neque numquam quae quaerat rerum sint sit tempore, velit? Cupiditate enim impedit iusto magni molestiae natus nulla quis soluta vel velit!</span><span>Aspernatur assumenda atque cumque doloremque earum ex mollitia neque nesciunt omnis perferendis, quidem rerum sit. Eum, fugiat fugit ipsa ipsum labore libero non? Error excepturi ipsum, minus quaerat temporibus voluptates.</span>
+                    </p>
+                </div>
+                <div class="container-img">
 
-            </div>
-
-            <div class="search-icon">
-
+                </div>
+                <div class="counter">
+                    <div>
+                        <h3 id="tour-count">0</h3>
+                        <p>Tour has done successfully</p>
+                    </div>
+                    <div>
+                        <h3 id="month-count">0</h3>
+                        <p>Monthly tour arrange</p>
+                    </div>
+                    <div>
+                        <h3 id="customer-count">0</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+            const startTime = performance.now()
+            function updateNumber(currentTime) {
+                const elapsedTime = currentTime - startTime
+                if (elapsedTime > duration) {
+                    callback(finalNumber)
+                } else {
+                    const rate = elapsedTime / duration
+                    const currentNumber = Math.round(rate * finalNumber)
+                    callback(currentNumber)
+                    requestAnimationFrame(updateNumber)
+                }
+            }
+            requestAnimationFrame(updateNumber)
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            animateNumber(5673, 30000, 0, function (number) {
+                const formattedNumber = number.toLocaleString()
+                document.getElementById('tour-count').innerText = formattedNumber
+            })
+
+            animateNumber(25, 30000, 0, function (number) {
+                const formattedNumber = number.toLocaleString()
+                document.getElementById('month-count').innerText = formattedNumber
+            })
+
+            animateNumber(21441, 30000, 0, function (number) {
+                const formattedNumber = number.toLocaleString()
+                document.getElementById('customer-count').innerText = formattedNumber
+            })
+        })
+    </script>
 </body>
 </html>
 
