@@ -255,7 +255,7 @@ body {
 
 .out-story-container .container-img::before {
     content: "Img here";
-    line-height:
+    /* line-height: */
 }
 
 .out-story-container .container-img {
@@ -293,4 +293,128 @@ body {
     margin-top: 20px;
     line-height: 28px;
     text-align: center;
+}
+
+.content3 .img-container {
+    width: 1140px;
+    position: relative;
+    margin: 0 auto;
+    /* z-index: -1; */
+}
+
+/* .content3 .img-container::before {
+    content: "";
+    display: table;
+} */
+
+.content3 .img-container .img1 {
+    width: 72%;
+    object-position: 50% 0%;
+    height: 691px;
+    position: relative;
+    margin: 0 9%;
+}
+
+.content3 .img-container .img2 {
+    position: absolute;
+    width: 100%;
+    left: 5px;
+    right: auto;
+    
+}
+
+.content3 .img-container .img3 {
+    width: 230px;
+    margin: -66px 0 0 -624px;
+}
+
+.content3 .container {
+    position: relative;
+    width: 668px;
+    min-height: 499px;
+    height: auto;
+    margin: -585px auto 112px 236px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    /* z-index: 1; */
+}
+
+.content3 .container h3 {
+    margin: -76px 0px 21px 0px;
+}
+
+.content3 .container h1 {
+    margin: 27px 0px 35px 0;
+}
+
+.content3 .container a{
+
+    text-transform: none;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 22px;
+    position: relative;
+    color: #fff;
+    transition: all 400ms;
+    
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 33%);
+}
+
+.content3 .container a:hover {
+    background-color: rgba(255, 254, 254, 0.232);
+    /* padding: 14px 24px; */
+    padding-left: 12px;
+    padding-right: 37px;
+    
+}
+.content3 .container a:after {
+    content: ">>";
+    position: absolute;
+    opacity: 0;
+    top : 11px;
+    right: -5px;
+    transition: all 0.5s;
+    font-size: 15px;
+}
+
+.content3 .container a:hover::after {
+    opacity: 1;
+    right: 10px;
+}
+
+.content4 {
+    background-color: #f1f1f182;
+    padding-top: 100px;
+    padding-bottom: 35px;
+}
+
+.content4 .row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.content4 div {
+    margin-bottom: 40px;
+}
+
+.content4 .row .col {
+    padding: 0 20px;
+}
+
+.content4 .row .icon {
+    text-align: center;
+}
+
+.content4 .row .text {
+    text-align: center;
+    color: #6e6e6e;
+}
+
+.content4 .row h2 {
+    margin-bottom: 20px;
+    color: #040e27;
 }
