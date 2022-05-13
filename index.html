@@ -22,7 +22,7 @@
                     <ul>
                         <li><a href="index.html">Home </a></li>
                         <li><a href="./page/about.html">About </a></li>
-                        <li><a href="">Destination </a></li>
+                        <li><a href="./page/destiantion.html">Destination </a></li>
                         <li><a href="">Pages
                                 <i class="arrow-down ti-angle-down"></i>
                             </a></li>
@@ -33,7 +33,7 @@
                     </ul>
                 </div>
                 <div class="contact">
-                    <span class="number">0862970457</span>
+                    <span class="number">+84862970457</span>
                     <a href="#"><i class="contact-face ti-facebook"></i></a>
                     <a href="#"><i class="contact-linked ti-linkedin"> </i> </a>
                     <a href="#"><i class="contact-gg ti-google"> </i> </a>
@@ -150,48 +150,86 @@
             </div>
             <div id="video">
                 <div class="video-content">
-                    <a href="https://www.youtube.com/watch?v=DIgv-e18OzA">
+                    <a href="https://www.youtube.com/watch?v=DIgv-e18OzA" target="_top">
                         Enjoy Video <i class="fa-solid fa-play" style="font-size: 80px !important;"></i>
                     </a>
                 </div>
 
             </div>
-
+            <div id="icon">
+                <div class="icon-item">
+                    <img src="/assets/img/1.svg" alt="">
+                    <h3>Comfortable Journey</h3>
+                    <span>A wonderful serenity has taken to the <br> possession of my entire soul.</span>
+                </div>
+                <div class="icon-item">
+                    <img src="/assets/img/2.svg" alt="">
+                    <h3>Luxuries Hotel</h3>
+                    <span>A wonderful serenity has taken to the <br> possession of my entire soul.</span>
+                </div>
+                <div class="icon-item">
+                    <img src="/assets/img/3.svg" alt="">
+                    <h3>Travel Guide</h3>
+                    <span>A wonderful serenity has taken to the <br> possession of my entire soul.</span>
+                </div>
+            </div>
         </div>
 
         <div id="footer">
-
+            <div class="contact-img">
+                <img src="./assets/img/TRAVELWY.png" alt="" style="height: 300px; width: 300px;">
+            </div>
+            <div class="contact-item">
+                <span> 470 Tran Dai Nghia street, Hoa Quy ward,<br> Ngu Hanh Son district, Da Nang</span>
+                <ul>
+                    <li><a href="#">+84862970457</a></li> <br>
+                    <li><a href="#">travelwithyou@vku.udn.vn</a></li><br> <br>
+                    <li><a href="#"> <i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+            <div class="contact-popular">
+                <h3>Popular Destination</h3>
+                <ul class="contact-popular-item">
+                    <li class=""><a href="#">Da Nang</a></li>
+                    <li><a href="#">Da Lat</a></li>
+                    <li><a href="#">Ninh Binh</a></li>
+                    <li><a href="#">Thua Thien Hue</a></li>
+                    <li><a href="#">Quang Ninh</a></li>
+                    <li><a href="#">Ha Noi</a></li>
+                    <li><a href="#">Ho Chi Minh</a></li>
+                    <li><a href="#">Ha Giang</a></li>
+                </ul>
+            </div>
+            <div class="contact-insta">
+                <div class="contact-insta-item">
+                    <img src="./assets/img/img1.jpg" alt="">
+                    <img src="./assets/img/img2.jpg" alt="">
+                    <img src="./assets/img/img3.jpg" alt="">
+                    <img src="./assets/img/img4.jpg" alt="">
+                    <img src="./assets/img/img 5.jpg" alt="">
+                    <img src="./assets/img/img6.jpg" alt="">
+                </div>
+            </div>
         </div>
-
     </div>
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideIndex = 0;
+        showSlides();
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
+        function showSlides() {
             let i;
             let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000);
         }
     </script>
 </body>
