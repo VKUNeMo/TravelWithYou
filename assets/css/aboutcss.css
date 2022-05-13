@@ -175,7 +175,9 @@ body {
 .out-story {
     background: #eaeaea00;
     padding-top: 10px;
-    background-image: url(../img/beach.jpg)
+    background-image: url(../img/beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .out-story-container {
