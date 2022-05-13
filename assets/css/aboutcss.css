@@ -172,12 +172,79 @@ body {
     height: 28vw;
 }
 
-.out-story {
-    background: #eaeaea00;
-    padding-top: 10px;
+.content1 {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: -38px;
+    padding-bottom: 50px;
+
+}
+
+.content1 .img-container {
+    border-radius:none;
+    border: none;
+    height: 680px;
+}
+
+.content1 div {
+    border-radius: 50% ;
+    border: 10px solid #ffffff;
+}
+
+.content1 .img1{
+    width: 130px;
+    height: 130px;
+    margin: 10% 0 0px 0px;
+    border: none;
+    background: rgb(250 0 11 / 55%);
+}
+
+.content1 .img2{
+    width: 540px;
+    height: 540px;
+    margin: -8% 0 0px 25%;
+    background-image: url(../img/people.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.content1 .img3{
+    width: 340px;
+    height: 340px;
+    margin: -24% 0 0px 5%;
     background-image: url(../img/beach.jpg);
+    background-size: cover;
+}
+.content1 .img4{
+    width: 100px;
+    height: 100px;
+    margin: -37% 0 0 88%;
+    border:10px solid rgb(250 0 11 / 55%);
+    z-index: -1;
+
+}
+.content1 .img5{
+    width: 250px;
+    height: 250px;
+    margin: -2% 0 0 66%;
+    background-image: url(../img/tree.jpg);
+    background-size: cover;
+}
+
+.content1 .paragraph {
+    border: none;
+    width: 100%;
+    height: 100px;
+    margin-left: 50%;
+    width: 50%;
+}
+
+.out-story {
+    padding-top: 10px;
+    background-image: linear-gradient(rgb(255 255 255 / 65%), rgb(174 174 174 / 32%)), url(../img/beach5.jpg);    
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 10% 10%;
+    opacity: 10px;
 }
 
 .out-story-container {
@@ -186,10 +253,16 @@ body {
     margin-top: 8%;
 }
 
+.out-story-container .container-img::before {
+    content: "Img here";
+    line-height:
+}
+
 .out-story-container .container-img {
     width: 100%;
     height: 300px;
     border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
 .out-story-container div {
@@ -202,6 +275,7 @@ body {
 }
 
 .out-story-container .counter {
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
 }
@@ -213,7 +287,7 @@ body {
 }
 
 .out-story-container .counter p {
-    color: #7a838b;
+    color: #a2d4ff;
     font-size: 19px;
     font-weight: 500;
     margin-top: 20px;
