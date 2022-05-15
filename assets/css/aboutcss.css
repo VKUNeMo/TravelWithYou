@@ -240,11 +240,12 @@ body {
 
 .out-story {
     padding-top: 10px;
-    background-image: linear-gradient(rgb(255 255 255 / 65%), rgb(174 174 174 / 32%)), url(../img/beach5.jpg);    
+    background-image: linear-gradient(rgb(90 222 210 / 26%), rgb(255 239 67 / 13%)), url(../img/beach5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 10% 10%;
-    opacity: 10px;
+    background-position: 10% 20%;
+    color: white;
+    /*opacity: 10px;*/
 }
 
 .out-story-container {
@@ -282,14 +283,14 @@ body {
 
 .out-story-container .counter h3 {
     font-size: 4em;
-    color: #ff4a52;
+    color: #e6121bbd;
     text-align: center;
 }
 
 .out-story-container .counter p {
-    color: #a2d4ff;
-    font-size: 19px;
-    font-weight: 500;
+    color: #0884ebd9;
+    font-size: 20px;
+    font-weight: 100;
     margin-top: 20px;
     line-height: 28px;
     text-align: center;
@@ -417,4 +418,96 @@ body {
 .content4 .row h2 {
     margin-bottom: 20px;
     color: #040e27;
+}
+
+#footer {
+    margin-top: 45px;
+    height: 450px;
+    padding: 120px 0;
+    background-color: #040E27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer>.contact-img {
+    margin-right: 20px;
+}
+
+#footer>.contact-item,
+.contact-popular {
+    list-style-type: none;
+    color: #bbb;
+    margin: 0 30px;
+}
+
+#footer>.contact-item li {
+    display: inline-block;
+}
+
+#footer>.contact-item a {
+    margin: 5px;
+    text-decoration: none;
+    color: #bbb;
+}
+
+#footer>.contact-item li:hover a {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    color: #FF4A52;
+}
+
+#footer>.contact-popular {
+    display: block;
+}
+
+#footer>.contact-popular li {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#footer>.contact-popular a {
+
+    text-decoration: none;
+    color: #bbb;
+}
+
+#footer>.contact-popular li:hover a {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    color: #FF4A52;
+}
+
+.contact-popular-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.contact-insta-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px
+}
+
+.contact-popular h3 {
+    font-family: var(--font-text);
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.contact-insta img {
+    border-radius: 5px;
+    width: 75px;
+    height: 75px;
 }
