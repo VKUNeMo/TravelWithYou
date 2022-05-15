@@ -39,7 +39,7 @@ body {
 }
 
 #header>#content_header {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -322,11 +322,19 @@ select {
 }
 
 .popular-content .popular-item img {
-
+    transition: all 0.5s ease-in-out;
     width: 400px;
     height: 300px;
     box-shadow: rgb(146, 48, 48);
     border-radius: 10px;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.popular-content .popular-item:hover img {
+    transform: scale(1.1);
+    opacity: 1.2;
+    cursor: pointer;
 }
 
 .popular-content .popular-item h3 {
@@ -339,7 +347,8 @@ select {
     font-family: var(--font-text);
 }
 
-.popular-content .popular-item h3:hover {
+.popular-content .popular-item:hover h3 {
+
     color: #FF4A52;
     bottom: 40px;
     cursor: pointer;
@@ -359,7 +368,8 @@ select {
 
 #video {
     margin-top: 100px;
-    height: 600px;
+    width: 100%;
+    height: 759px;
     background-image: url(/assets/img/back_gr_video.jpg);
     display: flex;
     justify-content: center;
@@ -370,6 +380,23 @@ select {
 
 #video>.video-content {
     display: block;
+    animation: but 2000ms linear 1000ms infinite;
+}
+
+@keyframes but {
+    0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: none;
+
+    }
 }
 
 #video>.video-content a {
@@ -380,6 +407,20 @@ select {
     font-family: "Nothing You Could Do", cursive;
     text-decoration: none;
 }
+
+.show-video {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #icon {
     margin: 30px;

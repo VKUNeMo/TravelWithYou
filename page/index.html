@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Travel With You</title>
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nothing You Could Do">
     <script src="https://kit.fontawesome.com/713e2d4828.js" crossorigin="anonymous"></script>
@@ -25,6 +25,7 @@
                         <li><a href="destiantion.html">Destination </a></li>
                         <li><a href="">Pages
                                 <i class="arrow-down ti-angle-down"></i>
+
                             </a></li>
                         <li><a href="">Blog
                                 <i class="arrow-down ti-angle-down"></i>
@@ -50,20 +51,19 @@
         <div id="slider">
             <div class="mySlides fade">
 
-                <img src="/assets/img/ammie-ngo-vcu-OZBxxRk-unsplash.jpg" style="width:100%;height: calc(100/3 * 2%);">
-                <div class="text">Caption Text</div>
+                <img src="/assets/img/slider-home1.jpg" style="width:100%;height: calc(100/3 * 2%);">
+                <div class="text">Ha Long Bay</div>
             </div>
 
             <div class="mySlides fade">
-                <img src="/assets/img/dac-duy-uAAXB-ocv4I-unsplash.jpg" style="width:100%;height: calc(100/3 * 2%);">
-                <div class="text">Caption Two</div>
+                <img src="/assets/img/slider-home-hagiang.jpg" style="width:100%;height: calc(100/3 * 2%);">
+                <div class="text">Ha Giang</div>
             </div>
 
             <div class="mySlides fade">
 
-                <img src="/assets/img/jakob-owens-5F_c9i3JP0I-unsplash.jpg" alt=""
-                    style="width:100%;height: calc(100/3 * 2%);">
-                <div class="text">Caption Three</div>
+                <img src="/assets/img/sliderhome3.jpg" alt="" style="width:100%;height: calc(100/3 * 2%);">
+                <div class="text">Quy Nhon</div>
             </div>
 
             <!-- Next and previous buttons -->
@@ -125,19 +125,19 @@
                         <h3>Ninh Binh</h3>
                     </div>
                     <div class="popular-item">
-                        <img src="/assets/img/pham-truc-f9AsKQWRmng-unsplash.jpg" alt="">
+                        <img src="/assets/img/sondoong-popular.jpg" alt="">
                         <br>
-                        <h3>Da Lat</h3>
+                        <h3>Quang Binh</h3>
                     </div>
                     <div class="popular-item">
-                        <img src="/assets/img/ammie-ngo-vcu-OZBxxRk-unsplash.jpg" alt="">
+                        <img src="/assets/img/ninhthuab-popular.webp" alt="">
                         <br>
-                        <h3>Da Lat</h3>
+                        <h3>Ninh Thuan</h3>
                     </div>
                     <div class="popular-item">
-                        <img src="/assets/img/dac-duy-uAAXB-ocv4I-unsplash.jpg" alt="">
+                        <img src="/assets/img/phuquoc-popular.jpg" alt="">
                         <br>
-                        <h3>Da Lat</h3>
+                        <h3>Phu Quoc</h3>
                     </div>
                     <div class="search-btn">
                         <button class="btn">
@@ -146,16 +146,15 @@
 
                     </div>
                 </div>
-
             </div>
             <div id="video">
                 <div class="video-content">
-                    <a href="https://www.youtube.com/watch?v=DIgv-e18OzA" target="_top">
+                    <a href="#">
                         Enjoy Video <i class="fa-solid fa-play" style="font-size: 80px !important;"></i>
                     </a>
                 </div>
-
             </div>
+
             <div id="icon">
                 <div class="icon-item">
                     <img src="/assets/img/1.svg" alt="">
@@ -231,6 +230,28 @@
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 5000);
         }
+    </script>
+    <script>
+        const video = document.querySelector(".video-content a");
+        video.addEventListener("click", handleZoom);
+        function handleZoom(event) {
+            console.log(event.target);
+            const src = event.target.getAttribute("src");
+            const template = `<div class="show-video">
+                <iframe width = "100%" height = "600px" src = "https://www.youtube.com/embed/Ilui-mb3sT0"
+            title = "YouTube video player" frameborder = "0"
+            allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen >
+                </iframe >
+            </div >`
+            document.body.insertAdjacentHTML("beforeend", template);
+        }
+        document.body.addEventListener("click", function (e) {
+            if (e.target.matches(".show-video")) {
+                e.target.parentNode.removeChild(e.target);
+            }
+        });
+
     </script>
 </body>
 
