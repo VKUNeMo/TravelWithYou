@@ -1,3 +1,13 @@
+@keyframes borderinput1 {
+    50% {width: 492px; height: 35px; margin: 9px 0;}
+    100% {width: 490px; height: 33px; margin: 10px 0;}
+}
+
+@keyframes borderinput2 {
+    50% {width: 492px; height: 152px; margin: 9px 0;}
+    100% {width: 490px; height: 150px; margin: 10px 0;}
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -142,10 +152,11 @@ body {
 
 .content1 {
     display: flex;
-    background-image: url(../img/backgroundmap.png);
+    background-image: url(../img/backgroundmap1.png);
     background-size: cover;
     background-position: 50% 50%;
-    
+    position: relative;
+    /* z-index: 0; */
 }
 
 .content1 .map {
@@ -164,10 +175,12 @@ body {
 }
 
 .content2 {
-    background-image: url(../img/backgroundcontactus.jpeg);
+    background-image: linear-gradient(135deg, rgb(0 0 0 / 16%), rgb(0 0 0 / 0%)), url(../img/backgroundcontactus.jpeg);
+    /* z-index: -1; */
+    position: relative;
     background-size: cover;
     background-position: 50% 50%;
-    color: rgb(221, 217, 217);
+    color: rgb(255, 255, 255);
     padding-bottom: 60px;
 }
 
@@ -237,6 +250,21 @@ body {
     border: 1px solid #ffffff;
     box-sizing: border-box;
     padding: 5px;
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.content2 .data3 input:focus {
+    background-color: #ffffff24;
+    animation-name: borderinput1;
+    animation-duration: 0.5s;
+}
+
+.content2 .data3 textarea:focus {
+    /* box-sizing: border-box; */
+    background-color: #ffffff24;
+    animation-name: borderinput2;
+    animation-duration: 0.5s;
 }
 
 .content2 .data3 input::placeholder {
@@ -245,11 +273,14 @@ body {
 
 .content2 .data3 textarea {
     width: 490px;
+    height: 150px;
     background-color: transparent;     
     margin: 10px 0;    
     border: 1px solid #ffffff;
     box-sizing: border-box;
     padding: 5px;
+    color: white;
+    border-radius: 5px;
 }
 
 .content2 .data3 textarea::placeholder {
@@ -282,6 +313,26 @@ body {
 .content2 .data4 a:hover {
     background-position: 99% 0;
 }
+
+.content2 {
+    position: relative;
+}
+
+.content2 h1 {
+    color: white;
+}
+
+.content2 .tag{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1;
+}
+.content2 .tag img {
+    width: 220px;
+}
+
 
 #footer {
     /*margin-top: 45px;*/
