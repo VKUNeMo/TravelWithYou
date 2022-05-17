@@ -59,14 +59,35 @@ body {
 }
 
 .logo img {
-    height: 100px;
+    height: 80px;
     object-fit: cover;
     object-position: 100% 45%;
 }
 
-#content_header .nav {
+#content_header>.nav {
     display: inline-block;
-    /* float: left; */
+    margin-right: 100px;
+    position: relative;
+}
+
+#content_header .nav .sub_nav {
+    display: none;
+    width: 180px;
+    position: absolute;
+    background-color: white;
+    left: 1px;
+    top: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+}
+
+#content_header .nav li:nth-child(4):hover .sub_nav {
+    display: block;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
 }
 
 .nav::before {
@@ -89,10 +110,11 @@ body {
     display: inline-block;
     font-family: "Rubik", sans-serif;
     position: relative;
-    text-transform: capitalize
+    text-transform: capitalize;
+
 }
 
-#content_header .nav li:hover a {
+#content_header .nav li:hover>a {
     -webkit-transition: all 400ms ease;
     -moz-transition: all 400ms ease;
     -ms-transition: all 400ms ease;
@@ -146,6 +168,7 @@ body {
 #header #content_header .search-icon .search {
     color: #f5d9d9;
 }
+
 
 /* Slider */
 #slider {
