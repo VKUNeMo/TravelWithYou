@@ -1,0 +1,389 @@
+/* Animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 4))}
+}
+
+
+* {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+/*  */
+.mgr-0 {
+    margin-right: 0 !important;
+}
+
+.no-decor a{
+    text-decoration: none;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+#main a {
+    text-decoration: none;
+}
+
+
+/* Style phần banner */
+
+.banner {
+    padding-top: 30px;
+    height: 450px;
+    background-image: linear-gradient(rgb(137 136 136 / 48%),rgb(137 136 136 / 48%)), url(../img/background-blog.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+
+.banner .container {
+    margin-bottom: 20px;
+    
+}
+
+
+.banner .slide-track {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.banner .option {
+    display: flex;
+    align-items: center;
+    /* text-decoration: none; */
+}
+
+.banner .option .text {
+    width: 50%;
+}
+
+.banner .slide-option .num {
+    text-align: center;
+}
+
+/* Style text cho banner */
+.banner .slide-option p {
+    width: 55px;
+    height: 55px;
+    border: 5px solid #ccc;
+    border-left: 5px solid rgb(0, 0, 0); 
+    border-radius: 50%;
+    line-height: 55px;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.slider {
+	background: transparent;
+	/* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 1080px;
+}
+/* headline banner */
+.banner .headline {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 35px;
+}
+
+
+
+/* 
+/* .slider::before, .slider::after {
+    /* background: linear-gradient(to right,  rgba(51, 51, 51, 0.908) 0%,rgba(255,255,255,0) 100%); */
+	/* content: "";
+	height: 100px;
+	position: absolute;
+	width: 200px;
+	z-index: 2; */
+/* } */ 
+/* .slider::before {
+    left: 0;
+	top: 0;
+}
+
+.slider::after {
+    right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+} */
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(400px * 8);
+}
+
+.slide-track .option {
+    height: 100px;
+    width: 400px;
+}
+
+.slide-track .option a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Main content 1*/
+
+.main-content {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    padding: 100px 0
+    /* align-items: stretch; */
+}
+
+.main-content .container {
+    width: 72%;
+}
+
+.main-content .sub-content {
+    width: 28%;
+}
+
+.main-content .category {
+    padding: 10px 0;
+}
+
+.main-content .content-category {
+    padding: 25px 0;
+}
+
+/* flex cho nav menu content */
+
+.main-content .container .nav-category {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.main-content .container .nav-category ul{
+    display: flex;
+    flex-wrap: wrap;
+    /* text-decoration: none; */
+    list-style: none;
+    padding-left: 0;
+
+}
+
+.main-content .container .nav-category ul a {
+    text-decoration: none;
+    /* line-height: 14px; */
+    font-size: 16px;
+    line-height: 30px;
+    display: block;
+    padding: 2px 14px;
+}
+.main-content .container .nav-category ul a.big {
+    font-size: 24px;
+    margin-right: 300px;
+    padding-left: 0;
+}
+
+/* set kich thuoc image */
+.main-content .category .image img {
+    width: 97px;
+    height: 97px;
+}
+
+.main-content .category .post-thumbnail img {
+    width: 395px;
+    height: 198px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.main-content .category .content-category .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.main-content .category .content-category .col {
+    width:48%;
+    padding: 0 0 0 0;
+    margin-right: 32px;
+    /* height: 100%; */
+}
+
+.main-content .content-category .col .row {
+    align-items: center;
+    margin-bottom: 10px;
+}
+.main-content .content-category .row .col .blog-post{
+    height: calc(100% - 10px);
+}
+
+.main-content .category .control .btn {
+    height:16px;
+    padding: 10px;
+    color: #ccc;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-content .category .control .btn:hover {
+    background: rgb(41 126 248 / 80%);
+    color:#fff;
+    cursor: pointer;
+}
+
+/*  Style phần top rate */
+
+.top-rate .container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.top-rate .headline {
+    padding: 10px 0 10px 0px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.top-rate .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-rate .col {
+    margin: 0 30px 0 0;
+    position: relative;
+}
+
+.top-rate .col img {
+    width: 359.81px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.top-rate .col .tr-content {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 90%;
+    height: 90%;
+    /* text-align: center; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff 
+}
+
+.top-rate .col .tr-content .tag a {
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #ccc;
+    height: 20px;
+
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.top-rate .col .tr-content .tag a:hover {
+    background-color: #3a96f9c2;
+    
+}
+
+.top-rate .col .tr-content a {
+    text-decoration: none;
+    color: #fff
+}
+
+/* Style phan cuoi */
+
+.lastest-content {
+    margin: 60px 0;
+}
+
+
+
+.lastest-content .headline {
+    padding: 10px 0 10px 0px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.lastest-content .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style  width phần lastest articles */
+.lastest-content .lastest-articles {
+    width: 65.78%;
+    margin-right: calc(3%);
+    box-sizing: border-box;
+}
+.lastest-content .lastest-articles img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+    
+.lastest-content .lastest-articles .row {
+    margin-bottom: 10px;
+}
+/* Style width phần most-popular videos */
+.lastest-content .most-popular-videos {
+    width: 31.222571372%;
+    box-sizing: border-box;
+    height: 50%;
+}
+
+.lastest-content .most-popular-videos .row {
+    display: block;
+}
+
+
+
+
+.lastest-content .most-popular-videos img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* Nút load more */
+
+.load-more {
+    text-align: center;
+}
+
+.load-more a {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 26px;
+    color: rgb(147, 147, 147);
+    transition: all 400ms ease-in-out;
+}
+
+.load-more a:hover {
+    background-color: #007cff9c;
+    color: #fff;
+}
