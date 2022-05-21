@@ -47,6 +47,26 @@ body {
     float: left;
 }
 
+#content_header .nav .sub_nav {
+    display: none;
+    width: 180px;
+    position: absolute;
+    background-color: white;
+    left: 1px;
+    top: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+}
+
+#content_header .nav li:nth-child(4):hover .sub_nav {
+    display: block;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+
 .nav::before {
     position: absolute;
     left: 0;
@@ -70,7 +90,7 @@ body {
     text-transform: capitalize;
 }
 
-#content_header .nav li:hover a {
+#content_header .nav li:hover>a {
     -webkit-transition: all 400ms ease;
     -moz-transition: all 400ms ease;
     -ms-transition: all 400ms ease;
@@ -181,17 +201,17 @@ body {
 }
 
 .content1 .img-container {
-    border-radius:none;
+    border-radius: none;
     border: none;
     height: 680px;
 }
 
 .content1 div {
-    border-radius: 50% ;
+    border-radius: 50%;
     border: 10px solid #ffffff;
 }
 
-.content1 .img1{
+.content1 .img1 {
     width: 130px;
     height: 130px;
     margin: 10% 0 0px 0px;
@@ -199,7 +219,7 @@ body {
     background: rgb(250 0 11 / 55%);
 }
 
-.content1 .img2{
+.content1 .img2 {
     width: 540px;
     height: 540px;
     margin: -8% 0 0px 25%;
@@ -207,22 +227,25 @@ body {
     background-position: 50% 50%;
     background-size: cover;
 }
-.content1 .img3{
+
+.content1 .img3 {
     width: 340px;
     height: 340px;
     margin: -24% 0 0px 5%;
     background-image: url(../img/beach.jpg);
     background-size: cover;
 }
-.content1 .img4{
+
+.content1 .img4 {
     width: 100px;
     height: 100px;
     margin: -37% 0 0 88%;
-    border:10px solid rgb(250 0 11 / 55%);
+    border: 10px solid rgb(250 0 11 / 55%);
     z-index: -1;
 
 }
-.content1 .img5{
+
+.content1 .img5 {
     width: 250px;
     height: 250px;
     margin: -2% 0 0 66%;
@@ -321,7 +344,7 @@ body {
     width: 100%;
     left: 5px;
     right: auto;
-    
+
 }
 
 .content3 .img-container .img3 {
@@ -350,7 +373,7 @@ body {
     margin: 27px 0px 35px 0;
 }
 
-.content3 .container a{
+.content3 .container a {
 
     text-transform: none;
     text-decoration: none;
@@ -359,7 +382,7 @@ body {
     position: relative;
     color: #fff;
     transition: all 400ms;
-    
+
     box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 33%);
 }
 
@@ -368,13 +391,14 @@ body {
     /* padding: 14px 24px; */
     padding-left: 12px;
     padding-right: 37px;
-    
+
 }
+
 .content3 .container a:after {
     content: ">>";
     position: absolute;
     opacity: 0;
-    top : 11px;
+    top: 11px;
     right: -5px;
     transition: all 0.5s;
     font-size: 15px;

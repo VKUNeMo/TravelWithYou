@@ -23,9 +23,9 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="index.html">Home </a></li>
-                        <li><a href="about.html">About </a></li>
-                        <li><a href="destiantion.html">Destination </a></li>
+                        <li><a href="../page/index.html">Home </a></li>
+                        <li><a href="../page/about.html">About </a></li>
+                        <li><a href="../page/destiantion.html">Destination </a></li>
                         <li><a href="">Blog
                                 <i class="arrow-down ti-angle-down"></i>
                                 <ul class="sub_nav">
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div id="slider">
-            <div class="slider-item">
+            <div class="slider-item fade">
                 <img src="../assets/img/story_trip1.jpg" alt="">
                 <div class="slider-text">
                     <div class="day">
@@ -73,8 +73,8 @@
                 </div>
 
             </div>
-            <div class="slider-item">
-                <img src="../assets/img/story_trip4.jfif" alt="">
+            <div class="slider-item fade">
+                <img class="img-change " src="../assets/img/sondoong-popular.jpg" alt="">
                 <div class="slider-text">
                     <div class=" day">
                         <span>16</span>
@@ -94,7 +94,7 @@
                     </div> -->
                 </div>
             </div>
-            <div class="slider-item">
+            <div class="slider-item fade">
                 <img src="../assets/img/slider-blog-2-1.jpg" alt="">
                 <div class="slider-text">
                     <div class="day">
@@ -115,8 +115,8 @@
                     </div> -->
                 </div>
             </div>
-            <div class="slider-item">
-                <img src="../assets/img/story-trip3.jfif" alt="">
+            <div class="slider-item fade">
+                <img class="img-change " src="../assets/img/danang_popular.jpg" alt="">
                 <div class="slider-text">
                     <div class="day">
                         <span>16</span>
@@ -390,6 +390,29 @@
         </div>
     </div>
     </div>
+    <script>
+        var slideIndex = 0;
+        var slideIndex1 = 1;
+        showSlides()
+        function showSlides() {
+            var imgs = ["../assets/img/danang_popular.jpg", "../assets/img/sondoong-popular.jpg"];
+            var slides = document.getElementsByClassName("img-change");
+            let i = 0
+            slide[0].src = imgs[slideIndex];
+            slide[1].src = imgs[slideIndex1]
+            slideIndex++;
+            slideIndex1++;
+            if (slideIndex == 2) {
+                slideIndex = 0;
+            }
+            if (slideIndex1 == 2) {
+                slideIndex1 = 0;
+            }
+            setTimeout(showSlides, 3000);
+
+        }
+
+    </script>
 </body>
 
 </html>
