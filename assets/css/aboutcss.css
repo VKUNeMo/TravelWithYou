@@ -9,8 +9,8 @@ body {
         sans-serif;
 }
 
-#main {}
 
+<<<<<<< HEAD
 #header {
     height: 80px;
     position: relative;
@@ -144,6 +144,8 @@ body {
 #header #content_header .search-icon .search {
     color: #f5d9d9;
 }
+=======
+>>>>>>> 21f596250abc91a694f6cd2651392635122b4fb3
 
 .banner {
     padding-top: 60px;
