@@ -173,7 +173,7 @@ HEAD #main {}
     color: #f5d9d9;
 }
 
-h3 {
+.banner h3 {
     font-family: "Nothing You Could Do", sans-serif;
     font-size: 150px;
     text-transform: capitalize;
