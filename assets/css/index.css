@@ -102,7 +102,6 @@ body {
     width: 1px;
     background: #efefef;
     content: '';
-    left: 20%;
 }
 
 #content_header .nav li {

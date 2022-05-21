@@ -1,7 +1,7 @@
 /* Animation */
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 4))}
+	100% { transform: translateX(calc(-400px * 4))}
 }
 
 
@@ -9,6 +9,11 @@
     margin: 0;
     font-family: "Rubik", sans-serif;
     
+}
+
+h2 {
+    font-size:26px;
+    font-weight: 300;
 }
 
 /*  */
@@ -23,7 +28,9 @@ a{
 
 .box-shadow {
     box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+
 }
+
 
 .width-100 {
     width: 100% !important;
@@ -81,7 +88,7 @@ a{
 }
 
 .banner .option .text {
-    width: 50%;
+    width: 56%;
 }
 
 .banner .slide-option .num {
@@ -99,6 +106,7 @@ a{
     font-size: 24px;
     margin-right: 20px;
     color: #d1d1d1;
+    transition: all 400ms ease;
 }
 
 .slider {
@@ -118,6 +126,7 @@ a{
     transform: translateX(-50%);
     color: #fff;
     font-size: 30px;
+    
 }
 
 
@@ -143,7 +152,7 @@ a{
 } */
 
 .slide-track {
-    animation: scroll 40s linear infinite;
+    animation: scroll 45s linear infinite;
     display: flex;
     width: calc(400px * 8);
 }
@@ -151,6 +160,17 @@ a{
 .slide-track .option {
     height: 100px;
     width: 400px;
+    transition: all 400ms ease;
+}
+
+.slide-track .option:hover {
+    transform: scale(1.04);
+}
+
+.slide-track .option:hover p {
+    border: 5px solid  rgb(30 198 182);
+    border-left: 5px solid #d1d1d1;
+    color: #fff;
 }
 
 .slide-track .option a {
@@ -164,7 +184,7 @@ a{
     margin: 0 auto;
     width: 75%;
     display: flex;
-    padding: 100px 0 130px 0;
+    padding: 100px 0 70px 0;
     /* align-items: stretch; */
 }
 
@@ -183,7 +203,7 @@ a{
 }
 
 .main-content .content-category {
-    padding: 25px 0;
+    padding: 25px 0 0 0;
 }
 
 /* flex cho nav menu content */
@@ -211,6 +231,10 @@ a{
     padding: 2px 14px;
     position: relative;
     
+}
+
+.main-content .container .nav-category ul a:hover {
+    color: #1ec6b6;
 }
 
 .main-content .container .nav-category ul a::after {
@@ -245,13 +269,15 @@ a{
 .main-content .category .image img {
     width: 97px;
     height: 97px;
+    margin: 0 0 -4px 0;
+    object-fit: cover;
 }
 
 .main-content .category .post-thumbnail img {
     width: 100%;
     height: 198px;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: 50% 62%;
 }
 
 .main-content .category .content-category .row {
@@ -262,6 +288,7 @@ a{
 
 .main-content .category .content-category .col {
     width:47.8%;
+    height: 430px;
     padding: 0 0 0 0;
     margin-right: 32px;
     /* height: 100%; */
@@ -271,6 +298,13 @@ a{
     align-items: center;
     margin-bottom: 10px;
 }
+
+.main-content .content-category .col .row:hover {
+    outline: 1.5px solid #ccc;
+    transform: scale(1.01);
+}
+
+
 .main-content .content-category .row .col .blog-post{
     height: calc(100% - 10px);
 }
@@ -289,6 +323,56 @@ a{
     background: rgb(41 126 248 / 80%);
     color:#fff;
     cursor: pointer;
+}
+
+/* post ct */
+
+.blog-post {
+    transition: all 100ms ease; 
+}
+
+.blog-post:hover{
+    transform: scale(1.02);
+}
+.post-ct {
+    text-align: center;
+}
+
+.post-ct .headline h5{
+    font-size: 22px;
+    padding: 10px 18px 17px 18px;
+    letter-spacing: 1px;
+}
+
+.post-ct > p {
+    text-align: left;
+    padding: 0px 16px 0 22px;
+    margin: 0 0 30px 0;
+}
+
+.post-ct .post-infor p * {
+    color: rgb(192, 192, 192);
+    font-size: 15px;
+}
+
+.content-category p a:hover {
+    color: #ff4a52;
+}
+
+.post-content {
+    box-sizing: border-box;
+    width: 73%;
+    padding: 0 13px;
+}
+
+.post-content h5 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.post-content .post-infor p * {
+    font-size: 13px;
+    color: rgb(192, 192, 192);
 }
 
 /* Sub content */
@@ -360,6 +444,12 @@ a{
     padding: 11px 101px;
     color: #ffffff;
     font-size: 17px;
+    transition: all 300ms ease;
+}
+
+.sub-content .button button:hover {
+    cursor: pointer;
+    background: rgb(255 74 82 / 78%);
 }
 
 
@@ -370,6 +460,12 @@ a{
     border: 2px solid #f1f1f1;
     border-left: 0;
     border-right: 0;
+    
+}
+
+.sub-content h5 {
+    font-weight: 300;
+    font-size: 16px;
 }
 .sub-content .top-stories img {
     width: 70px;
@@ -386,6 +482,12 @@ a{
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    transition: all 200ms ease;
+}
+
+.sub-content .top-stories .content > div:hover {
+    transform: scale(1.02);
+    outline: 1px solid #ccc;
 }
 
 .sub-content .top-stories .content > div > div {
@@ -418,6 +520,12 @@ a{
     font-size: 13px;
 }
 
+.tag-clouds .content a:hover {
+    background: #1ec6b6;
+    border: 1px solid rgb(127, 127, 127);
+    color: white;
+}
+
 /* instagram feeds */
 
 .instagram .content {
@@ -437,10 +545,17 @@ a{
     display: inline-block;
 }
 
+.instagram .content img:hover {
+    transform: scale(1.05);
+    border: 2px solid #1ec6b6;
+}
+
 .instagram .content img {
     width: 90px;
     height: 90px;
+    object-fit: cover;
     border-radius: 10px;
+    transition: all 300ms ease;
 } 
 
 
@@ -473,8 +588,27 @@ a{
     object-fit: cover;
 }
 
+.top-rate .col {
+    position: relative;
+}
+.top-rate .col::after {
+    width: 100%;
+    height: 98%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: auto;
+    content: '';
+    position: absolute;
+}
+
+.top-rate .col:hover:after {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 .top-rate .col .tr-content {
     position: absolute;
+    z-index: 10;
     display: flex;
     flex-wrap: wrap;
     top: 50%;
@@ -509,9 +643,25 @@ a{
     
 }
 
-.top-rate .col .tr-content a {
+.top-rate .col .tr-content > a {
     text-decoration: none;
-    color: #fff
+    color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+    
+}
+
+.top-rate .col .tr-content > a h5 {
+    font-size: 21px;
+}
+
+.top-rate .col .tr-content .post-infor p * {
+    color:rgb(192, 192, 192);
+    font-size: 15px;
+}
+
+.top-rate .col .tr-content .post-infor p a:hover {
+    color:#ff4a52;
 }
 
 /* Style phan cuoi */
@@ -539,9 +689,36 @@ a{
     margin-right: calc(3%);
     box-sizing: border-box;
 }
+
+.lastest-content .lastest-articles .post-ct {
+    width: 73%;
+    box-sizing: border-box;
+}
+
+.lastest-content .lastest-articles .post-ct > p {
+    margin-bottom: 32.5px;
+}
+
+.lastest-content .lastest-articles .post-infor > p {
+    margin-bottom: 15px;
+}
+
+.lastest-content .box-shadow {
+    transition: all 0.1s ease;
+}
+
+.lastest-content .box-shadow:hover {
+    outline: 1.5px solid #888;
+    transform: scale(1.01);
+} 
+
+.lastest-content .post-infor a:hover {
+    color:#ff4a52;
+}
+
 .lastest-content .lastest-articles img {
     width: 200px;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
     
