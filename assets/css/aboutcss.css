@@ -1,18 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Rubik",
-        sans-serif;
+@keyframes imgtable {
+    0% {transform: scale(1.0)}
+    50% {transform: scale(1.02);}
+    100% {transform: scale(1.0);}
 }
 
 .banner {
     padding-top: 60px;
-    background-image: url(../img/wolfgang-hasselmann--UXVR8xThzc-unsplash.jpg);
+    background-image: linear-gradient(rgb(0 0 0 / 18%), rgb(0 0 0 / 18%)), url(../img/about-img/banner-img.jpg);
     background-size: cover;
+    background-position: 100% 60%;
     background-repeat: no-repeat;
     background-color: #000000;
     color: white;
@@ -23,10 +19,24 @@ body {
     margin: 0 auto;
 }
 
-.banner .title {}
+.banner .title {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.banner .title h1 {
+    font-family: "Nothing You Could Do",sans-serif;
+    font-size: 150px;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: .5;
+    color: #fff;
+    margin-bottom: 0;
+}
 
 .banner .title p {
-    margin: 20px 645px 0 0;
+    margin: 40px 0 0 0;
+    font-size: 22px;
 }
 
 .banner .img-table {
@@ -49,6 +59,12 @@ body {
     object-fit: cover;
     object-position: 50% 50%;
     border-radius: 10px;
+    animation:  imgtable 4000ms linear infinite;
+}
+
+.img-table img:hover {
+    outline: 2px solid #1ec6b6 ;
+    cursor: pointer;
 }
 
 /* set height img 2*/
@@ -127,7 +143,7 @@ body {
 
 .out-story {
     padding-top: 10px;
-    background-image: linear-gradient(rgb(90 222 210 / 26%), rgb(255 239 67 / 13%)), url(../img/beach5.jpg);
+    background-image: linear-gradient(rgb(64 161 153 / 12%), rgb(255 239 67 / 13%)), url(../img/beach5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10% 20%;
@@ -141,15 +157,39 @@ body {
     margin-top: 8%;
 }
 
-.out-story-container .container-img::before {
-    content: "Img here";
-    /* line-height: */
+.out-story-container .paragraph p {
+    font-size: 20px;
+    font-weight:100;
+}
+
+
+
+.out-story-container .container-img img{
+    width: calc(50% - 20px);
+    height: 100%;
+    object-fit: cover;
+    float: left;
+    border-radius: 10px;
+}
+
+.out-story-container .container-img img:hover {
+    outline: 2px solid #1ec6b6;
+    cursor: pointer;
+}
+
+.out-story-container .container-img .img2 {
+    object-position: 50% 100%;
+    
+}
+.out-story-container .container-img .img1 {
+    object-position: 50% 10%;
+    margin-right: 20px;
 }
 
 .out-story-container .container-img {
-    width: 100%;
-    height: 300px;
-    border: 1px solid #ccc;
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
     margin-bottom: 10px;
 }
 
@@ -212,8 +252,31 @@ body {
 }
 
 .content3 .img-container .img3 {
+    position: relative;
     width: 230px;
     margin: -66px 0 0 -624px;
+    opacity: 1;
+    z-index: -1;
+    animation: content3 28000ms linear infinite;
+}
+
+@keyframes content3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    12% {
+        opacity: 0.9;
+        transform: translateX(0px);
+    }
+    88% {
+        opacity: 0.9;
+        transform: translateX(600px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(700px);
+    }
 }
 
 .content3 .container {
@@ -226,7 +289,7 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
-    /* z-index: 1; */
+    z-index: 10;
 }
 
 .content3 .container h3 {
