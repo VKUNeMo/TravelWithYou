@@ -160,7 +160,7 @@
     background-image: linear-gradient(rgb(64 161 153 / 12%), rgb(255 239 67 / 13%)), url(../img/beach5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 10% 20%;
+    background-position: 10% 11%;
     color: white;
     /*opacity: 10px;*/
 }
@@ -218,19 +218,29 @@
 
 .out-story-container .counter {
     margin-top: 10px;
-    display: flex;
+    /*display: flex;*/
     justify-content: space-around;
+}
+
+.out-story-container .counter div {
+    display: inline-block;
+    width: 340px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 20px;
 }
 
 .out-story-container .counter h3 {
     font-size: 4em;
     color: #e6121bbd;
     text-align: center;
+    /*box-sizing: border-box;*/
+    /*padding:10px;*/
 }
 
 .out-story-container .counter p {
     color: #0884ebd9;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 100;
     margin-top: 20px;
     line-height: 28px;
