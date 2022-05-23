@@ -9,6 +9,10 @@ body {
         sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
 
 #header {
@@ -344,45 +348,76 @@ select {
     grid-template-rows: 1fr 1fr;
 }
 
-.popular-content .popular-item img {
+.popular-content .popular-item {
+    position: relative;
+}
+
+.popular-item img {
     transition: all 0.5s ease-in-out;
     width: 400px;
     height: 300px;
     box-shadow: rgb(146, 48, 48);
     border-radius: 10px;
     overflow: hidden;
-    opacity: 0.9;
+    opacity: 1.2;
 }
 
-.popular-content .popular-item:hover img {
+.popular-item:hover img {
     transform: scale(1.1);
-    opacity: 1.2;
+    opacity: 0.9;
     cursor: pointer;
 }
 
-.popular-content .popular-item h3 {
-    position: relative;
+.popular-item h3 {
+    position: absolute;
     color: #f2f2f2;
     bottom: 35px;
-    right: 100px;
+    left: 40px;
     font-weight: 500;
     font-size: 22px;
     font-family: var(--font-text);
 }
 
-.popular-content .popular-item:hover h3 {
-
-    color: #FF4A52;
-    bottom: 40px;
-    cursor: pointer;
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
-    -ms-transition: all 400ms ease;
-    -o-transition: all 400ms ease;
-    transition: all 400ms ease;
+.popular-item:hover h3 {
+    display: none;
 }
 
+.popular-item .detail {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+    border-radius: 7px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 1);
 
+}
+
+.popular-content .popular-item:hover .detail {
+    opacity: 1.2;
+}
+
+.popular-content .popular-item .detail .detail-description {
+    margin: 1% 5%;
+
+}
+
+.detail-title {
+    margin-top: 5%;
+    font-size: 60px;
+    font-family: "Nothing You Could Do", cursive;
+}
+
+.detail-description li {
+    display: inline-block;
+    margin: 1em 0.5em;
+}
+
+.detail-description li:hover a {
+    color: #FF4A52;
+}
 
 .popular-content>.search-btn {
     grid-column-start: 2;
