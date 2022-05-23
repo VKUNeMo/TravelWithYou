@@ -37,7 +37,7 @@ body {
         sans-serif;
 }
 
-HEAD #main {}
+
 
 #header {
     height: 80px;
@@ -59,7 +59,7 @@ HEAD #main {}
 
 #content_header>.logo {
     display: inline-block;
-    float: left;
+
     margin-left: -3px;
 
 }
@@ -72,7 +72,7 @@ HEAD #main {}
 
 #content_header .nav {
     display: inline-block;
-    float: left;
+
 }
 
 #content_header .nav .sub_nav {
@@ -346,7 +346,7 @@ h3 {
     padding-bottom: 20px;
 }
 
-.content2 .data4 .button {}
+
 
 .content2 .data4 a {
 
@@ -471,6 +471,7 @@ h3 {
     font-weight: 400;
     margin-bottom: 30px;
     color: white;
+    font-size: 19px;
 }
 
 .contact-insta img {

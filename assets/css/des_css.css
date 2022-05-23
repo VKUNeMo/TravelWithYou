@@ -6,7 +6,7 @@ body {
 #slider {
     color: white;
     height: 800px;
-    background-image: url(/assets/img/slider-des1.jpg);
+    background-image: url(../img/slider-des1.jpg);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -39,6 +39,7 @@ body {
     height: 300px;
     box-shadow: rgb(146, 48, 48);
     border-radius: 10px;
+    opacity: 0.9;
 }
 
 #content-area .content-item a {
@@ -52,8 +53,18 @@ body {
     border-radius: 5px;
 }
 
-#content-area .content-item a:hover {
+#content-area .content-item:hover a {
     background-color: #FF4A52;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+
+#content-area .content-item:hover img {
+    opacity: 1;
+    transform: scale(1.01);
     -webkit-transition: all 400ms ease;
     -moz-transition: all 400ms ease;
     -ms-transition: all 400ms ease;
@@ -71,6 +82,7 @@ body {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .content-item>.item-text .country {

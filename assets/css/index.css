@@ -309,6 +309,7 @@ select {
     -o-transition: all 400ms ease;
     transition: all 400ms ease;
     background-color: #1ec6b6;
+
 }
 
 #popular {
@@ -392,7 +393,7 @@ select {
     margin-top: 100px;
     width: 100%;
     height: 759px;
-    background-image: url(../assets/img/back_gr_video.jpg);
+    background-image: url(../img/back_gr_video.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -549,6 +550,7 @@ select {
     font-weight: 400;
     margin-bottom: 30px;
     color: white;
+    font-size: 19px;
 }
 
 .contact-insta img {
