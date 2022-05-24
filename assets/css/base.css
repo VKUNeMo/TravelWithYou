@@ -79,6 +79,38 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 }
 
+@media screen and (min-width: 1367px) {
+    #content_header>.nav {
+        margin-right: 20%;
+        margin-left: 10%;
+    }
+
+    #content_header>.logo {
+
+        margin-left: 5%;
+
+    }
+}
+
+@media screen and (max-width:1366) {
+    #content_header>.nav {
+        margin-right: 9%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #content_header>.nav {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    #content_header>.logo {
+
+        margin-left: 2%;
+
+    }
+}
+
 #content_header .nav .sub_nav {
     display: none;
     width: 180px;

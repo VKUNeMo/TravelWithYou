@@ -180,7 +180,7 @@
     bottom: 50%;
     left: 50%;
     padding: 15px;
-    font-size: 38px;
+    font-size: 44px;
     border-radius: 5px;
     font-family: "Nothing You Could Do", cursive;
     transform: translate(-50%, 50%);
@@ -203,6 +203,7 @@
     margin: 40px;
     display: inline-block;
     position: relative;
+    width: 60%;
 }
 
 #content #news-content img {
@@ -266,12 +267,12 @@
     color: #3B3B3B;
 }
 
-#content #about-me {
-    display: inline-block;
-}
+
 
 #content #about-me {
-    width: 450px;
+    display: inline-block;
+    width: 30%;
+
 }
 
 #content #about-me h3 {
@@ -282,11 +283,21 @@
 }
 
 #content #about-me img {
-    width: 350px;
-    height: 350px;
+
     border-radius: 5px;
     object-fit: cover;
     margin-bottom: 40px;
+}
+
+#content #about-me .about-me-img img {
+    object-position: 50% 10%;
+    width: 49%;
+    height: 49%;
+}
+
+#content #about-me .about-me-img {
+    width: 100%;
+    height: 50%;
 }
 
 #content #about-me span {
@@ -295,7 +306,7 @@
     width: 100%;
     height: 100%;
     font-family: "Rubik", sans-serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 #content #about-me button,
@@ -368,6 +379,7 @@
 }
 
 #tour-news {
+    width: 100%;
     display: inline-block;
     display: grid;
     grid-template-columns: 400px 400px 500px;
@@ -398,8 +410,8 @@
 }
 
 #tour-news img {
-    width: 360px;
-    height: 240px;
+    width: 90%;
+    height: 60%;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -427,7 +439,24 @@ p {
 
 #feature-post {
     display: inline-block;
+    width: 100%;
+    height: 100%;
+}
 
+@media screen and (min-width: 1377px) {
+    #feature-post {
+        margin-left: 20%;
+    }
+
+    #content #about-me {
+        margin-left: 3%;
+        width: 40%;
+    }
+
+    #content #news-content {
+        width: 50%;
+
+    }
 }
 
 #feature-post h3 {
