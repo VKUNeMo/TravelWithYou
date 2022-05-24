@@ -35,8 +35,8 @@ body {
 }
 
 #content-area .content-item img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 80%;
     box-shadow: rgb(146, 48, 48);
     border-radius: 10px;
     opacity: 0.9;
@@ -78,10 +78,10 @@ body {
 
 #content-area .content-item .plan {
     position: absolute;
-    bottom: 5em;
-    left: 0.2em;
+
+    bottom: 20%;
     border-radius: 5px;
-    width: 98%;
+    width: 100%;
     height: 50%;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.6);
