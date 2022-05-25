@@ -135,6 +135,11 @@
                                     <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
 
                         </div>
                     </div>
@@ -163,7 +168,11 @@
                                     <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="popular-item">
@@ -190,7 +199,11 @@
                                     <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="popular-item">
@@ -218,7 +231,11 @@
                                     <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="popular-item">
@@ -236,8 +253,8 @@
                                     With a typical savanna climate, Ninh Thuan has little rain, a lot of sunshine and
                                     wind, and a rare and diverse terrain.
                                     This place has a mix of sub-deserts and sea, between vast forests and mountains,
-                                    between the bright sun during the day
-                                    and the cool breeze..
+                                    between the bright sun
+
                                 </span>
                                 <ul>
                                     <li><a href="#"> <i class="fa-brands fa-facebook-f"></i></a></li>
@@ -247,7 +264,11 @@
                                     <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="popular-item">
@@ -266,7 +287,7 @@
                                     Minh City. This place attracts
                                     domestic and foreign tourists by various types of tourism, with rich marine and
                                     island resources; diverse forest and
-                                    marine ecosystems.
+                                    marine
                                 </span>
                                 <ul>
                                     <li><a href="#"> <i class="fa-brands fa-facebook-f"></i></a></li>
@@ -276,7 +297,11 @@
                                     <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="search-btn">
@@ -392,7 +417,13 @@
                 e.target.parentNode.removeChild(e.target);
             }
         });
-
+    </script>
+    <script>
+        const but = document.querySelector(".book");
+        but.addEventListener("click", bookTour);
+        function bookTour(event) {
+            console.log(event.target);
+        }
     </script>
 </body>
 
