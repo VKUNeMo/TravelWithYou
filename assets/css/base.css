@@ -96,13 +96,13 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width:1366) {
     #content_header>.nav {
-        margin-right: 9%;
+        margin-right: 6%;
     }
 }
 
 @media screen and (min-width: 1500px) {
     #content_header>.nav {
-        margin-right: 15%;
+        margin-right: 13%;
         margin-left: 5%;
     }
 
