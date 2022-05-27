@@ -333,7 +333,7 @@ body::-webkit-scrollbar-thumb {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #6e6e6e8f;
+    background-color: rgb(76 76 76 / 23%);
     z-index: 1000;
     /* display: flex; */
     text-align: center;
@@ -341,12 +341,36 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+#login > div {
+    position: relative;
+    z-index: 1;
+}
+
 #login {
     width: 400px;
     height: 500px;
-    background-color: #9df6ed;
+    background: url(../img/login.jpg);
+    background-size: cover;
     border-radius: 30px;
+    position: relative;
+    color: black;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 31%);
+}
+#login::before, #signup::before {
+    content: "";
+    position: absolute;
+    /* z-index: ; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(255 255 255 / 40%);
+    background-size: cover;
+    border-radius: 30px;
+}
 
+#signup::before {
+    z-index: -1;
 }
 
 #login .headline {
@@ -354,9 +378,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 #login .headline h2{
-    background: linear-gradient(to right, #eee, #333);
+    font-size: 42px;
+    background: linear-gradient(to right, #ffffff, rgb(0 0 0));
+    text-shadow: -3px -2px 0px #00c961;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#login .form {
+    padding-top: 7px;
 }
 
 #login .form>div{
@@ -409,15 +439,26 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
 }
 
-
+#login .create a{
+    color: blue;
+}
 
 #login .social i {
     font-size: 40px;
     padding: 10px;
-    transition: all 100ms ease;
+    transition: transform 100ms ease;
 }
 #login .social i:hover {
     transform: scale(1.1);
+}
+
+.forgotPassword > a {
+    color: blue;
+    transition: color 400ms ease;
+}
+
+.forgotPassword > a:hover {
+    color: red;
 }
 
 
@@ -440,4 +481,24 @@ body::-webkit-scrollbar-thumb {
 }
 .fa-brands.fa-twitter-square {
     color: rgb(29, 155, 240);
+}
+
+#signup {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 500px;
+    background: url(../img/login.jpg);
+    background-size: cover;
+    border-radius: 30px;
+    position: relative;
+    color: black;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 31%);
+}
+
+#signup button {
+    margin-top: 5px;
 }
