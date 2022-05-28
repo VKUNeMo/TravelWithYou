@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 400ms ease;
 }
 
-.nav::before {
+/* .nav::before {
     position: absolute;
     left: 0;
     height: 49px;
@@ -163,10 +163,10 @@ body::-webkit-scrollbar-thumb {
     width: 1px;
     background: #efefef;
     content: '';
-}
+} */
 
 #content_header .nav li {
-    margin: 24px;
+    padding: 24px;
     display: inline-block;
     font-family: "Rubik", sans-serif;
     position: relative;
@@ -197,13 +197,19 @@ body::-webkit-scrollbar-thumb {
     float: left;
 }
 
+.contact .loginBtn {
+    
+    border-radius: 44px;
+    box-shadow: 1px 1px 3px #00000052;
+    padding: 10px 20px;
+}
+
 .arrow-down {
     font-size: 10px;
 }
 
 .contact span {
     padding: 0 5px;
-    border-right: 1px solid #EAEAEA;
 
 }
 
@@ -211,24 +217,37 @@ body::-webkit-scrollbar-thumb {
     padding: 10px;
 }
 
-#header #content_header .search-icon {
+#header #content_header .search-icon a {
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 0 25px;
-    background: #FF4A52;
-    font-size: 30px;
+    right: 20px;
+    top: 20px;
+    /* bottom: 0px; */
+    padding: 13px 12px 9px 13px;
+    background: rgb(255, 74, 82);
+    font-size: 20px;
     margin: auto;
     display: flex;
-    justify-items: center;
-    align-items: center;
+    place-items: center;
+    border-radius: 50%;
+    transition: all 250ms ease;
+}
+
+#header #content_header .search-icon input {
+    position: absolute;
+    opacity: 0;
+    right: 10px;
+    top: 20px;
+    padding: 12px 0px 12px 48px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    width: 200px;
+    outline: none;
+    transition: all 400ms ease;
 }
 
 #header #content_header .search-icon .search {
     color: #f5d9d9;
 }
-
 #footer {
     margin-top: 45px;
     /* height: 450px; */
@@ -355,6 +374,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     color: black;
     box-shadow: 1px 1px 8px rgb(0 0 0 / 31%);
+    /* transition: all 0.5s ease; */
 }
 #login::before, #signup::before {
     content: "";
