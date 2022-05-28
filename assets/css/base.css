@@ -1,12 +1,23 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Rubik",
         sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#header {
+    height: 80px;
+    position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -20,11 +31,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-image: linear-gradient(-45deg, #1EC6B6, #EAEAEA);
     border-radius: 50px;
-}
-
-#header {
-    height: 80px;
-    position: relative;
 }
 
 :root {
@@ -49,12 +55,23 @@ body::-webkit-scrollbar-thumb {
         sans-serif;
 }
 
+#loadpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff url(../img/load.gif) no-repeat center center;
+    background-size: 30%;
+    z-index: 999999;
+}
+
 #header>#content_header {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1;
     background-color: #ffffff;
     display: flex;
     justify-items: center;
@@ -64,12 +81,11 @@ body::-webkit-scrollbar-thumb {
 
 #content_header>.logo {
     display: inline-block;
-    /* float: left; */
     margin-left: -3px;
 
 }
 
-#header .logo img {
+.logo img {
     height: 80px;
     object-fit: cover;
     object-position: 100% 45%;
@@ -77,11 +93,11 @@ body::-webkit-scrollbar-thumb {
 
 #content_header>.nav {
     display: inline-block;
-    margin-right: 9%;
+    margin-right: 10%;
     position: relative;
 }
 
-@media screen and (min-width: 1367px) {
+@media screen and (min-width: 1800px) {
     #content_header>.nav {
         margin-right: 20%;
         margin-left: 10%;
@@ -94,6 +110,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+
 @media screen and (max-width:1366) {
     #content_header>.nav {
         margin-right: 6%;
@@ -103,6 +120,13 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width: 1500px) {
     #content_header>.nav {
         margin-right: 13%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #content_header>.nav {
+        margin-right: 10%;
+
         margin-left: 5%;
     }
 
@@ -110,6 +134,13 @@ body::-webkit-scrollbar-thumb {
 
         margin-left: 2%;
 
+    }
+}
+
+@media screen and (min-width:1700px) {
+    #content_header>.nav {
+        margin-right: 18%;
+        margin-left: 5%;
     }
 }
 
@@ -133,7 +164,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 400ms ease;
 }
 
-#header .nav::before {
+.nav::before {
     position: absolute;
     left: 0;
     height: 49px;
@@ -168,8 +199,8 @@ body::-webkit-scrollbar-thumb {
 
 
 #content_header .nav li a,
-#header .contact a,
-#header .search-icon a {
+.contact a,
+.search-icon a {
     color: #040E27;
     text-decoration: none;
 }
@@ -179,17 +210,17 @@ body::-webkit-scrollbar-thumb {
     float: left;
 }
 
-#header .arrow-down {
+.arrow-down {
     font-size: 10px;
 }
 
-#header .contact span {
+.contact span {
     padding: 0 5px;
     border-right: 1px solid #EAEAEA;
 
 }
 
-#header .contact a {
+.contact a {
     padding: 10px;
 }
 
@@ -207,8 +238,17 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
+#header #content_header .search-icon:hover {
+    color: #fff;
+    background-color: #fff;
+}
+
 #header #content_header .search-icon .search {
     color: #f5d9d9;
+}
+
+.search-input {
+    display: none;
 }
 
 #footer {
@@ -303,4 +343,242 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     width: 75px;
     height: 75px;
+}
+
+
+
+#loginform {
+    /* visibility:hidden; */
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #6e6e6e8f;
+    z-index: 1000;
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#login {
+    width: 400px;
+    height: 500px;
+    background-color: #9df6ed;
+    border-radius: 30px;
+
+}
+
+#login .headline {
+    margin: 40px 0 30px 0;
+}
+
+#login .headline h2 {
+    background: linear-gradient(to right, #eee, #333);
+
+    -webkit-text-fill-color: transparent;
+}
+
+#login .form>div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 45px 15px 45px;
+}
+
+#login .form label {
+    text-align: left;
+    margin-left: 5px;
+}
+
+#login .form input {
+    line-height: 22px;
+    border-radius: 10px;
+    padding: 6px;
+    border: 1px solid #ffffff00;
+}
+
+#login .form input:focus {
+    outline: 1px solid #ffffff00;
+}
+
+#login button {
+    margin: 25px 0 0 0;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1ec6b6;
+    color: #fff;
+}
+
+#login button:hover,
+#login button:active {
+    background-color: #FF4A52;
+}
+
+#login .forgotPassword {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+}
+
+#login .forgotPassword .rememberMe {
+    margin-right: 50px;
+}
+
+#login .social p {
+    margin-top: 10px;
+}
+
+
+
+#login .social i {
+    font-size: 40px;
+    padding: 10px;
+    transition: all 100ms ease;
+}
+
+#login .social i:hover {
+    transform: scale(1.1);
+}
+
+
+.fa-brands.fa-facebook-square::before {
+    content: "\f082";
+}
+
+.fa-brands.fa-facebook-square {
+    color: hsl(214, 100%, 59%);
+    ;
+}
+
+.fa-brands.fa-google-plus-square::before {
+    content: "\f0d4";
+}
+
+.fa-brands.fa-google-plus-square {
+    color: red;
+}
+
+.fa-brands.fa-twitter-square::before {
+    content: "\f081";
+}
+
+.fa-brands.fa-twitter-square {
+    color: rgb(29, 155, 240);
+}
+
+.container-form {
+    /* transform: translate(-50%, -50%); */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-form {
+    position: relative;
+    font-size: 20px;
+    height: 70%;
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url(../img/backgr_book_now.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-form>.title {
+    text-align: center;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 80px;
+    font-weight: 400;
+
+}
+
+.form div {
+    margin: 15px;
+    text-align: left;
+}
+
+.form span {
+    margin: 10px 15px;
+}
+
+.form-input {
+    margin: 5px 15px;
+}
+
+.form .form-input,
+.form .people-input {
+    font-size: 1em;
+    border-radius: 5px;
+    display: flex;
+    height: 2em;
+    width: 21.9em;
+}
+
+.form-left {
+    font-size: 25px;
+}
+
+.confirm {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    /* transform: translateZ(0); */
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 40%;
+}
+
+.confirm:hover {
+    -webkit-filter: brightness(1.1);
+}
+
+.parent {
+    display: inline-block;
+}
+
+.child {
+    display: inline-block;
+}
+
+.form .people-input {
+    width: 10em;
+    height: 2em;
 }
