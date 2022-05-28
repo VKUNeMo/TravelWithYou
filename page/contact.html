@@ -174,48 +174,82 @@
         </div>
         
         <div id="login">
-            <div class="headline">
-                <h2>Hello!</h2>
-                <p>Sign into your account</p>
-            </div>
-            <div class="form">
-                <div class="email">
-                    <label for="">Email</label>
-                    <input type="text" placeholder="Email">
+            <div>
+                <div class="headline">
+                    <h2>Hello!</h2>
+                    <p>Sign into your account</p>
                 </div>
-                <div class="password">
-                    <label for="">Password</label>
-                    <input type="text" placeholder="Password">
-                </div>
-                <div class="forgotPassword" style="display: inline-block">
-                    <div class="rememberMe" style="display: inline-block">
-                        <input type="radio">
-                        <label for="">Remember me</label>
+                <div class="form">
+                    <div class="email">
+                        <label for="">Email</label>
+                        <input type="text" placeholder="Email">
                     </div>
-
-                    <a href="#">Forgot Password</a>
+                    <div class="password">
+                        <label for="">Password</label>
+                        <input type="text" placeholder="Password">
+                    </div>
+                    <div class="forgotPassword" style="display: inline-block">
+                        <div class="rememberMe" style="display: inline-block">
+                            <input type="radio">
+                            <label for="">Remember me</label>
+                        </div>
+    
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <button id="signin" onclick=baodeptrai()>
+                        Sign in
+                    </button>
                 </div>
-                <button id="signin" onclick=baodeptrai()>
-                    Sign in
-                </button>
-            </div>
-            <div class="social">
-                <p>or</p>
-                <div class="icon">
-                    <i class="fa-brands fa-facebook-square"></i>
-                    <!-- f082 -->
-                    <i class="fa-brands fa-google-plus-square"></i>
-                    <!-- f0d4 -->
-                    <i class="fa-brands fa-twitter-square"></i>
+                <div class="social">
+                    <p>or</p>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <!-- f082 -->
+                        <i class="fa-brands fa-google-plus-square"></i>
+                        <!-- f0d4 -->
+                        <i class="fa-brands fa-twitter-square"></i>
+                    </div>
                 </div>
+                <div class="create">
+                    <p>Don't have an account? <a href="#" onclick="dungdeptrai()">Create</a></p>
+                </div>
+                
             </div>
-            <div class="create">
-                <p>Don't have an account? <a href="#">Create</a></p>
+            <div id="signup">
+                <div class="headline">
+                    <h2>Hello!</h2>
+                    <p>Sign into your account</p>
+                </div>
+                <div class="form">
+                    <div class="email">
+                        <label for="">Email</label>
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div class="password">
+                        <label for="">Password</label>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="password">
+                        <label for="">Confirm Password</label>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button id="signin" onclick=baodeptrai()>
+                        Sign up
+                    </button>
+                </div>
+                <div class="social">
+                    <p>or register with</p>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <!-- f082 -->
+                        <i class="fa-brands fa-google-plus-square"></i>
+                        <!-- f0d4 -->
+                        <i class="fa-brands fa-twitter-square"></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="signup">
-
-        </div>
+        
     </div>
     <script src="../assets/js/loginvsload.js"></script>
 </body>
