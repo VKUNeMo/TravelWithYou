@@ -503,46 +503,49 @@
     </div>
     <script src="../assets/js/loginvsload.js"></script>
     <script>
-        const but = document.querySelector(".book-now button ");
-        but.addEventListener("click", bookTour);
-        function bookTour(event) {
-            console.log(event.target);
-            const template1 = ` <div class="container-form">
-            <div class="book-form">
-                <div class="title">
-                    <h3>BOOK NOW</h3>
-                </div>
-                <div class="form">
-                    <div class="name">
-                        <span class="form-left">Name </span>
-                        <input type="text" placeholder="Name" class="form-input">
+        const buts = document.querySelectorAll(".book-now button ");
+        buts.forEach(but => {
+            but.addEventListener("click", bookTour);
+            function bookTour(event) {
+                console.log(event.target);
+                const template1 = ` <div class="container-form">
+                <div class="book-form">
+                    <div class="title">
+                        <h3>BOOK NOW</h3>
                     </div>
-                    <div class="number">
-                        <span class="form-left">Number</span>
-                        <input type="number" placeholder="Number" class="form-input">
-                    </div>
-                    <div class="address">
-                        <span class="form-left">Address</span>
-                        <input type="text" name="" id="" placeholder="Address" class="form-input">
-                    </div>
-                    <div class="people">
-                        <div class="parent">
-                            <span class="form-left">Adults</span>
-                            <input type="number" placeholder=" 200$ / 1 people" class="people-input">
+                    <div class="form">
+                        <div class="name">
+                            <span class="form-left">Name </span>
+                            <input type="text" placeholder="Name" class="form-input">
                         </div>
-                        <div class="child">
-                            <span class="form-left">Child</span>
-                            <input type="number" placeholder="150$ / 1 people" class="people-input">
+                        <div class="number">
+                            <span class="form-left">Number</span>
+                            <input type="number" placeholder="Number" class="form-input">
+                        </div>
+                        <div class="address">
+                            <span class="form-left">Address</span>
+                            <input type="text" name="" id="" placeholder="Address" class="form-input">
+                        </div>
+                        <div class="people">
+                            <div class="parent">
+                                <span class="form-left">Adults</span>
+                                <input type="number" placeholder=" 200$ / 1 people" class="people-input">
+                            </div>
+                            <div class="child">
+                                <span class="form-left">Child</span>
+                                <input type="number" placeholder="150$ / 1 people" class="people-input">
+                            </div>
+                        </div>
+                        <div class="book-button" style="text-align:center ;">
+                            <button class="confirm" role="button">Confirm</button>
                         </div>
                     </div>
-                    <div class="book-button" style="text-align:center ;">
-                        <button class="confirm" role="button">Confirm</button>
-                    </div>
                 </div>
-            </div>
-        </div>`
-            document.body.insertAdjacentHTML("beforeend", template1);
+            </div>`
+                document.body.insertAdjacentHTML("beforeend", template1);
+            }
         }
+        )
         document.body.addEventListener("click", function (e) {
             if (e.target.matches(".container-form")) {
                 e.target.parentNode.removeChild(e.target);

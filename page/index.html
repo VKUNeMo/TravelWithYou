@@ -465,7 +465,7 @@
             </div>
         </div>
     </div> -->
-    <script src="../assets/js/loginvsload.js"></script>
+
     <script>
         let slideIndex = 0;
         showSlides();
@@ -504,11 +504,12 @@
         });
     </script>
     <script>
-        const but = document.querySelector(".book-now button ");
-        but.addEventListener("click", bookTour);
-        function bookTour(event) {
-            console.log(event.target);
-            const template1 = ` <div class="container-form">
+        const buts = document.querySelectorAll(".book-now button ");
+        buts.forEach(but => {
+            but.addEventListener("click", bookTour);
+            function bookTour(event) {
+                console.log(event.target);
+                const template1 = ` <div class="container-form">
         <div class="book-form">
             <div class="title">
                 <h3>BOOK NOW</h3>
@@ -537,18 +538,29 @@
                     </div>
                 </div>
                 <div class="book-button" style="text-align:center ;">
-                    <button class="confirm" role="button">Confirm</button>
+                    <button class="confirm" >Confirm</button>
                 </div>
             </div>
         </div>
     </div>`
-            document.body.insertAdjacentHTML("beforeend", template1);
+                document.body.insertAdjacentHTML("beforeend", template1);
+            }
         }
+        )
         document.body.addEventListener("click", function (e) {
             if (e.target.matches(".container-form")) {
                 e.target.parentNode.removeChild(e.target);
             }
         });
+    </script>
+    <script src="../assets/js/loginvsload.js"></script>
+    <script>
+        const but_book = document.querySelector(".confirm")
+        but_book.addEventListener("click", thoat_form);
+        function thoat_form(event) {
+            console.log(event.target)
+            document.getElementsByClassName(".container-form").style.display = "none";
+        }
     </script>
 </body>
 
