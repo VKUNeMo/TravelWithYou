@@ -435,7 +435,7 @@
 
         </div>
     </div>
-    <!-- <div class="container-form">
+    <div class="container-form">
         <div class="book-form">
             <div class="title">
                 <h3>BOOK NOW</h3>
@@ -456,19 +456,25 @@
                 <div class="people">
                     <div class="parent">
                         <span class="form-left">Adults</span>
-                        <input type="number" placeholder=" 200$ / 1 people" class="people-input">
+                        <input type="number" placeholder=" 200$ / 1 people" class="people-input"
+                            oninput="checkNumber()">
                     </div>
                     <div class="child">
                         <span class="form-left">Child</span>
-                        <input type="number" placeholder="150$ / 1 people" class="people-input">
+                        <input type="number" placeholder="150$ / 1 people" class="people-input" oninput="checkNumber()">
                     </div>
+
+                </div>
+                <div class="total">
+                    <span class="form-left">Total</span>
+                    <input type="text" placeholder="Total" id="total_number">
                 </div>
                 <div class="book-button" style="text-align:center ;">
-                    <button class="confirm" role="button">Confirm</button>
+                    <button class="confirm" role="button" onclick="Total()">Confirm</button>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <script>
         let slideIndex = 0;
@@ -541,6 +547,10 @@
                         <input type="number" placeholder="150$ / 1 people" class="people-input">
                     </div>
                 </div>
+                <div class="total">
+                    <span class="form-left">Total</span>
+                    <input type="text" placeholder="Total" id="total_number">
+                </div>
                 <div class="book-button" style="text-align:center ;">
                     <button class="confirm" >Confirm</button>
                 </div>
@@ -559,11 +569,23 @@
     </script>
     <script src="../assets/js/loginvsload.js"></script>
     <script>
-        const but_book = document.querySelector(".confirm")
-        but_book.addEventListener("click", thoat_form);
-        function thoat_form(event) {
-            console.log(event.target)
-            document.getElementsByClassName(".container-form").style.display = "none";
+        function Total() {
+            var people = document.getElementsByClassName("people-input")[0].value;
+            var child = document.getElementsByClassName("people-input")[1].value;
+            parseInt(people);
+            document.getElementById("total_number").value = parseInt(people) * 200 + parseInt(child) * 150 + 500 + "$";
+        }
+        function checkNumber() {
+            var people = document.getElementsByClassName("people-input")[0].value;
+            var child = document.getElementsByClassName("people-input")[1].value;
+            if (people <= 0) {
+                alert("Number of adults must be greater than 0")
+                document.getElementsByClassName("people-input")[0].value = "";
+            }
+            else if (people <= 0 && child > 0) {
+                alert("Need a adult");
+                document.getElementsByClassName("people-input")[1].value = "";
+            }
         }
     </script>
 </body>
