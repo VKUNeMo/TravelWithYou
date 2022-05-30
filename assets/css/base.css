@@ -431,7 +431,7 @@ body::-webkit-scrollbar-thumb {
     -webkit-text-fill-color: transparent;
 }
 
-#login .form>div {}
+
 
 #login .headline h2 {
     font-size: 42px;
@@ -569,13 +569,14 @@ body::-webkit-scrollbar-thumb {
     width: 50%;
     padding: 20px;
     border-radius: 1em;
-    background-image: url(../img/backgr_book_now.jpg);
+    background-image: url(../img/phuquoc-popular.jpg);
     background-size: cover;
     background-position: left;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FF4A52;
+    color: #fa303a;
+    text-shadow: -1px -1px 0px #333;
     box-shadow: 5px #333;
 }
 
@@ -584,7 +585,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "Nothing You Could Do", cursive;
     font-size: 80px;
     font-weight: 400;
-
+    text-shadow: -3px -2px 0px #333;
 }
 
 .form div {
@@ -598,6 +599,7 @@ body::-webkit-scrollbar-thumb {
 
 .form-input {
     margin: 5px 15px;
+    border: 1px solid #040E27;
 }
 
 .form .form-input,
@@ -610,8 +612,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .form-left {
-    font-size: 25px;
-    color: #040E27;
+    font-size: 27px;
+    color: #333;
 }
 
 .confirm {
