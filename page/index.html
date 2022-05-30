@@ -540,19 +540,21 @@
                 <div class="people">
                     <div class="parent">
                         <span class="form-left">Adults</span>
-                        <input type="number" placeholder=" 200$ / 1 people" class="people-input">
+                        <input type="number" placeholder=" 200$ / 1 people" class="people-input"
+                            oninput="checkNumber()">
                     </div>
                     <div class="child">
                         <span class="form-left">Child</span>
-                        <input type="number" placeholder="150$ / 1 people" class="people-input">
+                        <input type="number" placeholder="150$ / 1 people" class="people-input" oninput="checkNumber()">
                     </div>
+
                 </div>
                 <div class="total">
                     <span class="form-left">Total</span>
                     <input type="text" placeholder="Total" id="total_number">
                 </div>
                 <div class="book-button" style="text-align:center ;">
-                    <button class="confirm" >Confirm</button>
+                    <button class="confirm" role="button" onclick="Total()">Confirm</button>
                 </div>
             </div>
         </div>
