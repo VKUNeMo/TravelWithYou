@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nothing You Could Do">
     <link rel="stylesheet" href="../assets/css/des_css.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+
     <script src="https://kit.fontawesome.com/713e2d4828.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="main">
+        <div id="loadpage"></div>
         <div id="header">
             <div id="content_header">
                 <div class="logo">
@@ -24,29 +27,32 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="../page/index.html">Home </a></li>
-                        <li><a href="../page/about.html">About </a></li>
-                        <li><a href="../page/destiantion.html">Destination </a></li>
-                        <li><a href="">Blog
+                        <li><a href="index.html">Home </a></li>
+                        <li><a href="about.html">About </a></li>
+                        <li><a href="destiantion.html">Destination </a></li>
+
+                        <li>
+                            <a href="">Blog
                                 <i class="arrow-down ti-angle-down"></i>
-                                <ul class="sub_nav">
-                                    <li><a href="../page/blog.html">Blog</a></li>
-                                    <li><a href="../page/single_blog.html">Single-Blog</a></li>
-                                </ul>
-                            </a></li>
-                        <li><a href="contact.html">Contact </a></li>
+                            </a>
+                            <ul class="sub_nav">
+                                <li><a href="../page/blog.html">Blog</a></li>
+                                <li><a href="../page/single_blog.html">Single-Blog</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li> </a></li>
                     </ul>
                 </div>
                 <div class="contact">
-                    <span class="number">+8462970457</span>
-                    <a class="loginBtn" href="#" onclick='baodeptrai()'>Login</a>
+                    <span class="number">+84862970457</span>
+                    <a href="#" onclick='baodeptrai()'>Login</a>
                 </div>
                 <div class="search-icon">
                     <div class="input">
 
                         <input type="text" placeholder="Type some text" id="search-id" autocomplete="off">
                     </div>
-                    <a href="#" id="sear" style="color: #fff;" >
+                    <a href="#" id="sear" style="color: #fff;">
                         <i class="search ti-search"> </i>
                     </a>
                 </div>
@@ -101,7 +107,11 @@
                                 <span style="color: #1ec6b6; margin-right: 0.5em;">Plane
                                     <i class="fa-solid fa-plane"></i></span>
                             </p>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="item-text">
@@ -144,7 +154,11 @@
                                 <span style="color: #1ec6b6;">Plane
                                     <i class="fa-solid fa-plane"></i></span>
                             </p>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="item-text">
@@ -187,7 +201,11 @@
                                 <span style="color: #1ec6b6;">Plane
                                     <i class="fa-solid fa-plane"></i></span>
                             </p>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="item-text">
@@ -230,7 +248,11 @@
                                 <span style="color: #1ec6b6;">Plane
                                     <i class="fa-solid fa-plane"></i></span>
                             </p>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="item-text">
@@ -273,7 +295,11 @@
                                 <span style="color: #1ec6b6;">Plane
                                     <i class="fa-solid fa-plane"></i></span>
                             </p>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="item-text">
@@ -317,7 +343,11 @@
                                 <span style="color: #1ec6b6;">Plane
                                     <i class="fa-solid fa-plane"></i></span>
                             </p>
-
+                            <div class="book-now">
+                                <button class="book">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="item-text">
@@ -426,6 +456,106 @@
         </div>
     </div>
     </div>
+    <div id="loginform">
+        <div class="exit">
+
+        </div>
+
+        <div id="login">
+            <div class="headline">
+                <h2>Hello!</h2>
+                <p>Sign into your account</p>
+            </div>
+            <div class="form">
+                <div class="email">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="password">
+                    <label for="">Password</label>
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="forgotPassword" style="display: inline-block">
+                    <div class="rememberMe" style="display: inline-block">
+                        <input type="radio">
+                        <label for="">Remember me</label>
+                    </div>
+
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button id="signin" onclick=baodeptrai()>
+                    Sign in
+                </button>
+            </div>
+            <div class="social">
+                <p>or</p>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <!-- f082 -->
+                    <i class="fa-brands fa-google-plus-square"></i>
+                    <!-- f0d4 -->
+                    <i class="fa-brands fa-twitter-square"></i>
+                </div>
+            </div>
+            <div class="create">
+                <p>Don't have an account? <a href="#">Create</a></p>
+            </div>
+        </div>
+        <div id="signup">
+
+        </div>
+    </div>
+    <script src="../assets/js/loginvsload.js"></script>
+    <script>
+        const buts = document.querySelectorAll(".book-now button ");
+        buts.forEach(but => {
+            but.addEventListener("click", bookTour);
+            function bookTour(event) {
+                console.log(event.target);
+                const template1 = ` <div class="container-form">
+                <div class="book-form">
+                    <div class="title">
+                        <h3>BOOK NOW</h3>
+                    </div>
+                    <div class="form">
+                        <div class="name">
+                            <span class="form-left">Name </span>
+                            <input type="text" placeholder="Name" class="form-input">
+                        </div>
+                        <div class="number">
+                            <span class="form-left">Number</span>
+                            <input type="number" placeholder="Number" class="form-input">
+                        </div>
+                        <div class="address">
+                            <span class="form-left">Address</span>
+                            <input type="text" name="" id="" placeholder="Address" class="form-input">
+                        </div>
+                        <div class="people">
+                            <div class="parent">
+                                <span class="form-left">Adults</span>
+                                <input type="number" placeholder=" 200$ / 1 people" class="people-input">
+                            </div>
+                            <div class="child">
+                                <span class="form-left">Child</span>
+                                <input type="number" placeholder="150$ / 1 people" class="people-input">
+                            </div>
+                        </div>
+                        <div class="book-button" style="text-align:center ;">
+                            <button class="confirm" role="button">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+                document.body.insertAdjacentHTML("beforeend", template1);
+            }
+        }
+        )
+        document.body.addEventListener("click", function (e) {
+            if (e.target.matches(".container-form")) {
+                e.target.parentNode.removeChild(e.target);
+            }
+        });
+    </script>
 </body>
 
 </html>
