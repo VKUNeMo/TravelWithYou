@@ -69,8 +69,6 @@
 
 .content1 .map iframe {
     width: 70vw;
-    margin: 0 50%;
-    transform: translateX(-50%);
     border-radius: 10px;
 
     box-shadow: 1px 1px 12px 0px rgb(0 0 0 / 40%);
@@ -240,95 +238,11 @@
 }
 
 
-#footer {
-    /*margin-top: 45px;*/
-    height: 450px;
-    padding: 120px 0;
-    background-color: #040E27;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#footer>.contact-img {
-    margin-right: 20px;
-}
-
-#footer>.contact-item,
-.contact-popular {
-    list-style-type: none;
-    color: #bbb;
-    margin: 0 30px;
-}
-
-#footer>.contact-item li {
-    display: inline-block;
-}
-
-#footer>.contact-item a {
-    margin: 5px;
-    text-decoration: none;
-    color: #bbb;
-}
-
-#footer>.contact-item li:hover a {
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
-    -ms-transition: all 400ms ease;
-    -o-transition: all 400ms ease;
-    transition: all 400ms ease;
-    color: #FF4A52;
-}
-
-#footer>.contact-popular {
-    display: block;
-}
-
-#footer>.contact-popular li {
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 10px;
-}
-
-#footer>.contact-popular a {
-
-    text-decoration: none;
-    color: #bbb;
-}
-
-#footer>.contact-popular li:hover a {
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
-    -ms-transition: all 400ms ease;
-    -o-transition: all 400ms ease;
-    transition: all 400ms ease;
-    color: #FF4A52;
-}
-
-.contact-popular-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.contact-insta-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px
-}
-
-.contact-popular h3 {
-    font-family: var(--font-text);
-    font-weight: 400;
-    margin-bottom: 30px;
-    color: white;
-    font-size: 19px;
-}
-
-.contact-insta img {
-    border-radius: 5px;
-    width: 75px;
-    height: 75px;
+/* Tablet width 820*/
+@media screen and (max-width: 820px) {
+    .content1 {
+        background-repeat: no-repeat;
+        background-size: 130%;
+    }
 }
