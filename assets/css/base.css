@@ -111,9 +111,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+@media screen and (max-width:1366) {
+    #content_header>.nav {
+        margin-right: 6%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #content_header>.nav {
+        margin-right: 13%;
+    }
+}
+
 @media screen and (min-width: 1500px) {
     #content_header>.nav {
         margin-right: 10%;
+
         margin-left: 5%;
     }
 
@@ -198,7 +211,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact .loginBtn {
-    
+
     border-radius: 44px;
     box-shadow: 1px 1px 3px #00000052;
     padding: 10px 20px;
@@ -245,9 +258,21 @@ body::-webkit-scrollbar-thumb {
     transition: all 400ms ease;
 }
 
+#header #content_header .search-icon:hover {
+    color: #fff;
+    background-color: #fff;
+}
+
 #header #content_header .search-icon .search {
     color: #f5d9d9;
 }
+
+
+.search-input {
+    display: none;
+}
+
+
 #footer {
     margin-top: 45px;
     /* height: 450px; */
@@ -346,7 +371,7 @@ body::-webkit-scrollbar-thumb {
 
 #loginform {
     /* visibility:hidden; */
-    display: flex ;
+    display: flex;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -360,7 +385,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
-#login > div {
+#login>div {
     position: relative;
     z-index: 1;
 }
@@ -376,7 +401,9 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 1px 1px 8px rgb(0 0 0 / 31%);
     /* transition: all 0.5s ease; */
 }
-#login::before, #signup::before {
+
+#login::before,
+#signup::before {
     content: "";
     position: absolute;
     /* z-index: ; */
@@ -397,7 +424,16 @@ body::-webkit-scrollbar-thumb {
     margin: 40px 0 30px 0;
 }
 
-#login .headline h2{
+
+#login .headline h2 {
+    background: linear-gradient(to right, #eee, #333);
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+#login .headline h2 {
     font-size: 42px;
     background: linear-gradient(to right, #ffffff, rgb(0 0 0));
     text-shadow: -3px -2px 0px #00c961;
@@ -409,10 +445,11 @@ body::-webkit-scrollbar-thumb {
     padding-top: 7px;
 }
 
-#login .form>div{
+#login .form>div {
+
     display: flex;
     flex-direction: column;
-    margin:0 45px 15px 45px;
+    margin: 0 45px 15px 45px;
 }
 
 #login .form label {
@@ -441,7 +478,8 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
 }
 
-#login button:hover, #login button:active {
+#login button:hover,
+#login button:active {
     background-color: #FF4A52;
 }
 
@@ -459,7 +497,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
 }
 
-#login .create a{
+#login .create a {
     color: blue;
 }
 
@@ -468,16 +506,17 @@ body::-webkit-scrollbar-thumb {
     padding: 10px;
     transition: transform 100ms ease;
 }
+
 #login .social i:hover {
     transform: scale(1.1);
 }
 
-.forgotPassword > a {
+.forgotPassword>a {
     color: blue;
     transition: color 400ms ease;
 }
 
-.forgotPassword > a:hover {
+.forgotPassword>a:hover {
     color: red;
 }
 
@@ -485,13 +524,16 @@ body::-webkit-scrollbar-thumb {
 .fa-brands.fa-facebook-square::before {
     content: "\f082";
 }
+
 .fa-brands.fa-facebook-square {
-    color: hsl(214, 100%, 59%);;
+    color: hsl(214, 100%, 59%);
+    ;
 }
 
 .fa-brands.fa-google-plus-square::before {
     content: "\f0d4";
 }
+
 .fa-brands.fa-google-plus-square {
     color: red;
 }
@@ -499,8 +541,137 @@ body::-webkit-scrollbar-thumb {
 .fa-brands.fa-twitter-square::before {
     content: "\f081";
 }
+
 .fa-brands.fa-twitter-square {
     color: rgb(29, 155, 240);
+}
+
+
+.container-form {
+    /* transform: translate(-50%, -50%); */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-form {
+    position: relative;
+    font-size: 20px;
+    height: 80%;
+    width: 50%;
+    padding: 20px;
+    border-radius: 1em;
+    background-image: url(../img/phuquoc-popular.jpg);
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fa303a;
+    text-shadow: -1px -1px 0px #333;
+    box-shadow: 5px #333;
+}
+
+.book-form>.title {
+    text-align: center;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 80px;
+    font-weight: 400;
+    text-shadow: -3px -2px 0px #333;
+}
+
+.form div {
+    margin: 15px;
+    text-align: left;
+}
+
+.form span {
+    margin: 10px 15px;
+}
+
+.form-input {
+    margin: 5px 15px;
+    border: 1px solid #040E27;
+}
+
+.form .form-input,
+.form .people-input {
+    font-size: 1em;
+    border-radius: 0.7em;
+    display: flex;
+    height: 2em;
+    width: 21.9em;
+}
+
+.form-left {
+    font-size: 27px;
+    color: #333;
+}
+
+.confirm {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    /* transform: translateZ(0); */
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 40%;
+}
+
+.confirm:hover {
+    -webkit-filter: brightness(1.1);
+}
+
+.parent {
+    display: inline-block;
+}
+
+.child {
+    display: inline-block;
+}
+
+.form .people-input {
+    width: 10em;
+    height: 2em;
+}
+
+#total_number {
+    width: 10em;
+    height: 2em;
+    font-size: 1em;
+    border-radius: 0.7em;
+
+
 }
 
 #signup {
@@ -521,4 +692,5 @@ body::-webkit-scrollbar-thumb {
 
 #signup button {
     margin-top: 5px;
+
 }
