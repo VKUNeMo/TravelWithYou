@@ -572,6 +572,8 @@ select {
 
     .search-btn .btn {
         margin-top: 1em;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     #popular {

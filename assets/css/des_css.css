@@ -223,3 +223,37 @@ body {
     transition: all 400ms ease;
 
 }
+
+/* tablet */
+@media screen and (max-width:64em) and (min-width: 46.25em) {
+    #slider {
+        height: 31.25em;
+    }
+
+    #content-area {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #content-area .content-item img {
+        opacity: 1.2;
+    }
+
+    #content-area .content-item .plan {
+        display: none;
+    }
+
+    .content-item>.item-text .star,
+    .content-item>.item-text .review {
+        left: 15%
+    }
+
+    .search-btn {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .contact-insta-item {
+        display: none !important;
+    }
+}

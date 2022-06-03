@@ -512,7 +512,8 @@
             but.addEventListener("click", bookTour);
             function bookTour(event) {
                 console.log(event.target);
-                const template1 = ` <div class="container-form">
+                const template1 = ` <form>
+                <div class="container-form">
                 <div class="book-form">
                     <div class="title">
                         <h3>BOOK NOW</h3>
@@ -541,11 +542,12 @@
                             </div>
                         </div>
                         <div class="book-button" style="text-align:center ;">
-                            <button class="confirm" role="button">Confirm</button>
+                            <button type="button" class="confirm" role="button">Confirm</button>
                         </div>
                     </div>
                 </div>
-            </div>`
+            </div>
+            </form>`
                 document.body.insertAdjacentHTML("beforeend", template1);
             }
         }
