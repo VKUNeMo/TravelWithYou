@@ -8,7 +8,7 @@
 * {
     margin: 0;
     font-family: "Rubik", sans-serif;
-    
+    box-sizing: content-box;
 }
 
 h2 {
@@ -116,7 +116,6 @@ a{
 	margin: auto;
 	overflow:hidden;
 	position: relative;
-	width: 1080px;
 }
 /* headline banner */
 .banner .headline {
@@ -182,7 +181,7 @@ a{
 
 .main-content {
     margin: 0 auto;
-    width: 75%;
+    width: 1134px;
     display: flex;
     padding: 100px 0 70px 0;
     /* align-items: stretch; */
@@ -562,7 +561,7 @@ a{
 /*  Style phần top rate */
 
 .top-rate .container {
-    width: 75%;
+    width: 1134px;
     margin: 0 auto;
 }
 
@@ -575,15 +574,17 @@ a{
 .top-rate .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .top-rate .col {
     margin: 0 30px 0 0;
     position: relative;
+    width: 30%;
 }
 
 .top-rate .col img {
-    width: 359.81px;
+    width: 100%;
     height: 190px;
     object-fit: cover;
 }
@@ -670,6 +671,10 @@ a{
     margin: 110px 0;
 }
 
+.lastest-content .container {
+    width: 1134px;
+}
+
 
 
 .lastest-content .headline {
@@ -727,7 +732,7 @@ a{
 }
 /* Style width phần most-popular videos */
 .lastest-content .most-popular-videos {
-    width: 31.222571372%;
+    width: 31%;
     box-sizing: border-box;
     height: 50%;
 }
@@ -830,4 +835,85 @@ a{
 .load-more a:hover {
     background-color: #007cff9c;
     color: #fff;
+}
+
+/* Max width 1051px */
+@media screen and (max-width: 1519px) {
+    .lastest-content .lastest-articles img {
+        width: 190px;
+    }
+    .main-content .category .image img {
+        width: 86px;
+        width: 86px;
+    }
+    
+}
+
+/* Max width 1134px */
+@media screen and (max-width: 1143px) {
+    .main-content .sub-content {
+        display: none;
+    }
+    .main-content .container {
+        width: 727px;
+        margin-right: auto;
+    }
+
+    .post-ct .headline h5 {
+        font-size: 20px;
+    }
+    .main-content .container .nav-category ul a {
+        font-size: 14px;
+    }
+    .main-content .container .nav-category ul .big {
+        font-size: 22px;
+    }
+    .top-rate .container {
+        width: 727px;
+    }
+    .top-rate .col {
+        width: 90%;
+        margin-right: 0;
+    }
+    .lastest-content .most-popular-videos {
+        width: 727px;
+    }
+    .lastest-content .most-popular-videos .row {
+        height: auto;
+    }
+    .lastest-content .container {
+        width: 727px;
+    }
+    .lastest-content .lastest-articles {
+        width: 100%;
+    }
+    .main-content {
+        width: 727px;
+    }
+}
+
+/* Max width 737px */
+@media screen and (max-width: 737px) {
+    .main-content {
+        width: 95%;
+    }
+    .main-content .category .content-category .col {
+        width: 95%;
+        margin-right: 0;
+    }
+    .top-rate .container {
+        width: 96vw;
+    }
+    .lastest-content .container {
+        width: 95vw;
+    }
+    .lastest-content .lastest-articles img {
+        width: 100%;
+    }
+    .lastest-content .lastest-articles .post-ct{
+        width: auto;
+    }
+    .lastest-content .lastest-articles {
+        margin-right: 0;
+    }
 }
