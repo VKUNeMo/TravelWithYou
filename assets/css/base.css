@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100000;
     background-color: #ffffff;
     display: flex;
     justify-items: center;
@@ -267,9 +267,9 @@ body::-webkit-scrollbar-thumb {
     color: #f5d9d9;
 }
 
-#nav-icon a {
+#nav-icon a{
     color: black;
-    font-size: 24px;
+    font-size:24px;
     display: none;
 }
 
@@ -671,11 +671,6 @@ body::-webkit-scrollbar-thumb {
 .form .people-input {
     width: 10em;
     height: 2em;
-    margin-left: 0.8em;
-}
-
-.total {
-    margin-top: 1em;
 }
 
 #total_number {
@@ -706,86 +701,56 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+@media screen and (max-width: 1220px) {
+    #content_header>.nav {
+        margin-right: 50px;
+    }
+}
+
+
 /* Tablet width 820 */
-@media screen and (max-width:64em) and (min-width: 46.25em) {
-    #slider {
-        height: 31.25em;
-    }
-
+@media screen and (max-width: 1150px) {
     .logo img {
-        width: 190px;
+        width: 190px;   
     }
-
     #header #content_header {
         width: 100vw
     }
-
     #content_header>.nav {
         font-size: 14px;
-        margin-right: 1%;
+        margin-right: 10px;
     }
-
     #content_header .nav li {
         padding: 10px;
     }
-
     .contact span {
         display: none;
     }
-
-    .contact a {
-        padding: 5px;
-    }
-
-    #search-id {
-        width: 140px;
-    }
-
     #header #content_header .search-icon a {
         top: 20px;
-        right: 105px;
+        right: 118px;
         /* font-size: 14px; */
     }
-
-    #search-id {
-        opacity: 1 !important;
-    }
-
-    #sear {
-        transform: none !important;
-    }
-
     #header #content_header .search-icon input {
         opacity: 1;
-        right: 11px;
-        width: 140px;
-
-        padding: 14px 0 14px 52px;
+        right: 2px;
+        width: 161px;
+        box-sizing: border-box;
+        
+    padding: 14px 0 14px 52px;
 
         font-size: 11px;
     }
-
     .contact .loginBtn {
         font-size: 14px;
     }
-
-    #where-togo input,
-    select {
-        margin: 0 0.5%;
-        font-size: 90%;
-    }
-
-    #where-togo h3 {
-        margin-right: 0.5%;
-    }
-
-    /* Footer */
+/* Footer */
     .contact-insta-item {
         display: none !important;
     }
 
     #footer {
-        height: 0;
+        height: 0; 
         padding: 130px 0;
         font-size: 14px;
     }
@@ -798,11 +763,10 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         width: 240px;
         margin: 0;
-    }
-
+    }   
     #footer>.contact-popular li {
-        margin: 3px;
+        margin: 0;
     }
 
-
+    
 }
