@@ -553,6 +553,7 @@ select {
 @media screen and (max-width : 51.25em) {
     .text {
         bottom: 1.625em;
+        font-size: 6.25em;
     }
 
     #content>#where-togo {
