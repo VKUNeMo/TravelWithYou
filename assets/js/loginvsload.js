@@ -42,12 +42,16 @@ function dungdeptrai() {
 
 
 function mouseover() {
-    document.getElementById("sear").style.transform = "translateX(-150px)";
+    if (screen.width > 1080) {
+        document.getElementById("sear").style.transform = "translateX(-150px)";
     document.getElementById("search-id").style.opacity = "1";
+    }
 }
 
 function mouseout() {
+    if (screen.width > 1080) {
     document.getElementById("search-id").style.opacity = "0";
     document.getElementById("sear").style.transform = "translateX(0px)";
+    }
 }
 
