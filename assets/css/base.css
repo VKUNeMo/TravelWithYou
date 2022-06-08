@@ -267,9 +267,9 @@ body::-webkit-scrollbar-thumb {
     color: #f5d9d9;
 }
 
-#nav-icon a{
+#nav-icon a {
     color: black;
-    font-size:24px;
+    font-size: 24px;
     display: none;
 }
 
@@ -711,46 +711,54 @@ body::-webkit-scrollbar-thumb {
 /* Tablet width 820 */
 @media screen and (max-width: 1150px) {
     .logo img {
-        width: 190px;   
+        width: 190px;
     }
+
     #header #content_header {
         width: 100vw
     }
+
     #content_header>.nav {
         font-size: 14px;
         margin-right: 10px;
     }
+
     #content_header .nav li {
         padding: 10px;
     }
+
     .contact span {
         display: none;
     }
+
     #header #content_header .search-icon a {
         top: 20px;
         right: 118px;
         /* font-size: 14px; */
     }
+
     #header #content_header .search-icon input {
         opacity: 1;
         right: 2px;
         width: 161px;
         box-sizing: border-box;
-        
-    padding: 14px 0 14px 52px;
+
+        padding: 14px 0 14px 52px;
 
         font-size: 11px;
     }
+
     .contact .loginBtn {
         font-size: 14px;
     }
-/* Footer */
+
+    /* Footer */
     .contact-insta-item {
         display: none !important;
     }
 
     #footer {
-        height: 0; 
+        height: 0;
         padding: 130px 0;
         font-size: 14px;
     }
@@ -763,10 +771,11 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         width: 240px;
         margin: 0;
-    }   
+    }
+
     #footer>.contact-popular li {
         margin: 0;
     }
 
-    
+
 }
