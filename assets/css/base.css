@@ -619,9 +619,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 #input-form h3 {
-    font-size: 3em;
+    font-size: 4em;
     font-family: "Rubik",
         sans-serif;
+    position: relative;
+    bottom: 0.3em;
+
 }
 
 #input-form span {
@@ -634,18 +637,18 @@ body::-webkit-scrollbar-thumb {
 
 #input-form input {
     font-size: 1em;
-    width: 70%;
+    width: 90%;
     height: 2em;
     display: block;
-    margin-bottom: 0.9em;
+    margin-bottom: 0.5em;
     margin-top: 0.2em;
     margin-left: 1em;
 }
 
 form {
     background-color: aliceblue;
-    width: 65%;
-    height: 90%;
+    width: 70%;
+    height: 95%;
     border: 1px solid #ccc;
     display: block;
     margin: 0 3em;
@@ -675,6 +678,8 @@ form {
     margin-top: 2em;
     text-align: center;
 }
+
+
 
 @media screen and (max-width: 1220px) {
     #content_header>.nav {
