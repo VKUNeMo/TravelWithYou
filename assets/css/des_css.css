@@ -257,3 +257,41 @@ body {
         display: none !important;
     }
 }
+
+/* Mobile */
+@media screen and (max-width: 46.1875em) {
+    #slider {
+        height: 300px;
+        margin-bottom: 1em;
+    }
+
+    #slider>span>span {
+        position: relative;
+        top: 4.8em;
+        font-size: 0.8em;
+    }
+
+    #slider h3 {
+        position: relative;
+        top: 1.3em;
+        font-size: 60px;
+    }
+
+    #content-area {
+        display: block;
+    }
+
+    #content-area .content-item {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    #content-area .content-item .plan {
+        display: none;
+    }
+
+    #content>#share-story .share-img {
+        display: block;
+    }
+}

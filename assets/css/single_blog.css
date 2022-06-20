@@ -643,3 +643,46 @@ p {
         display: none !important;
     }
 }
+
+/* mobile */
+@media screen and (max-width: 46.1875em) {
+    #slider {
+        display: block;
+    }
+
+    #content #slider-content {
+        display: none;
+    }
+
+    #content #about-me {
+        display: none;
+    }
+
+    #content #news-content .news-content-text {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    #content #news-content {
+        margin: 0;
+        width: 100%;
+    }
+
+    #feature-post img {
+        width: 99%;
+    }
+
+    #feature-post {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        margin: 0 0.1em;
+    }
+
+    #tour-news {
+        text-align: center;
+        display: block;
+        margin: 0;
+    }
+}
