@@ -785,7 +785,7 @@ body::-webkit-scrollbar-thumb {
     
 }
 .active {
-    transform: translateX(-100%);
+    transform: translateX(-120%);
 }
 
 @media screen and (max-width: 800px) {
@@ -807,7 +807,8 @@ body::-webkit-scrollbar-thumb {
     #nav-bar {
         display: block;
         position: absolute;
-        top: 84px;
+        top: 85px;
+        box-shadow: 0px 2px 4px 1px rgb(0 0 0 / 14%);
         height: 1000vh;
         background-color: #fffffffa;
         transition: all 0.5s ease;
@@ -840,13 +841,15 @@ body::-webkit-scrollbar-thumb {
     }
     #header li.search-icon {
         display: block;
+        position: relative;
     }
+    
     #header #content_header .search-icon input {
-        top: 272px; 
+        /* top: 272px;  */
         right: 18px;
     }
     #header #content_header .search-icon a {
-        top: 272px; 
+        /* top: 272px;  */
         right: 134px;
     }
     
