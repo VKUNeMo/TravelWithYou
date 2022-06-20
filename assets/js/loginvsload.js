@@ -6,8 +6,8 @@ document.body.addEventListener("click", function (e) {
 });
 document.getElementById("loginform").style.visibility = "hidden";
 document.getElementById("signup").style.display = "none";
-document.getElementById("sear").onmouseover = function () { mouseover() };
-document.getElementById("search-id").onmouseout = function () { mouseout() };
+// document.getElementById("sear").onmouseover = function () { mouseover() };
+// document.getElementById("search-id").onmouseout = function () { mouseout() };
 
 window.addEventListener("load", setTimeout(function () {
     document.getElementById("loadpage").style.display = "none";
@@ -40,18 +40,31 @@ function dungdeptrai() {
     }
 };
 
+function myFunction() {
+    var element = document.getElementById("nav-bar");
+    element.classList.toggle("active");
+    var element = document.getElementById("nav-icon");
+    element.classList.toggle("transform_180");
+ }
 
-function mouseover() {
-    if (screen.width > 1080) {
-        document.getElementById("sear").style.transform = "translateX(-150px)";
-    document.getElementById("search-id").style.opacity = "1";
-    }
-}
 
-function mouseout() {
-    if (screen.width > 1080) {
-    document.getElementById("search-id").style.opacity = "0";
-    document.getElementById("sear").style.transform = "translateX(0px)";
-    }
-}
+// function mouseover() {
+//     if (screen.width > 1080) {
+//         document.getElementById("sear").style.transform = "translateX(-150px)";
+//     document.getElementById("search-id").style.opacity = "1";
+//     }
+// }
 
+// function mouseout() {
+//     if (screen.width > 1080) {
+//     document.getElementById("search-id").style.opacity = "0";
+//     document.getElementById("sear").style.transform = "translateX(0px)";
+//     }
+// }
+
+// var icon__menu = $('#sear')
+// var menu__navbar = $("#navbar__1000");
+    // document.getElementById("sear").click(() => {
+    //     document.getElementById("sear").toggleClass('transform__180');
+    //   menu__navbar.toggleClass('transform__0')
+//    })
