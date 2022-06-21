@@ -21,15 +21,15 @@ a {
     position: relative;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: #fafafa;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-image: linear-gradient(-45deg, #1EC6B6, #EAEAEA);
     border-radius: 50px;
 }
