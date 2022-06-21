@@ -822,6 +822,7 @@ a{
 .load-more {
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .load-more a {
