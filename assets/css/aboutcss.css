@@ -182,7 +182,7 @@
 
 
 .out-story-container .container-img img{
-    width: calc(26% - 20px);
+    width: calc(25% - 20px);
     height: 100%;
     margin-right: 12px;
     object-fit: cover;
