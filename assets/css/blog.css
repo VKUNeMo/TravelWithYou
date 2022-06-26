@@ -559,6 +559,9 @@ a{
 
 
 /*  Style phần top rate */
+.top-rate {
+    margin-bottom: 85px;
+}
 
 .top-rate .container {
     width: 1134px;
