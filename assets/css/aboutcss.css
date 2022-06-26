@@ -182,11 +182,16 @@
 
 
 .out-story-container .container-img img{
-    width: calc(50% - 20px);
+    width: calc(26% - 20px);
     height: 100%;
+    margin-right: 12px;
     object-fit: cover;
     float: left;
     border-radius: 10px;
+}
+
+.out-story-container .container-img .img4 {
+    margin-right: 0 !important;
 }
 
 .out-story-container .container-img img:hover {
@@ -200,11 +205,11 @@
 }
 .out-story-container .container-img .img1 {
     object-position: 50% 10%;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 .out-story-container .container-img {
-    width: 80%;
+    /* width: 80%; */
     margin: 0 auto;
     height: 400px;
     margin-bottom: 10px;
