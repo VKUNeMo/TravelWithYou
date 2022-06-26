@@ -6,6 +6,34 @@
         "h1 h4 h3";
     gap: 10px;
 }
+.slider-item{
+    position: relative;
+}
+.slider-item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(213, 213, 213, 0.15);
+    transition: all 0.5s linear;
+}
+.slider-item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(213, 213, 213, 0.15);
+    transition: all 0.5s linear;
+}
+.slider-item:hover::before,
+.slider-item:hover::after{
+    width: 98%;
+    height: 98%;
+}
 
 #slider .slider-item:nth-child(1) {
     grid-area: h1;
@@ -200,10 +228,10 @@
 }
 
 #content #news-content {
-    margin: 1.5em;
     display: inline-block;
     position: relative;
-    width: 60%;
+    width: 100%;
+
 }
 
 #content #news-content img {
@@ -234,7 +262,7 @@
 #content #news-content .news-content-text {
     text-align: center;
     width: 800px;
-
+    margin: auto;
 }
 
 #content #news-content .news-content-text span {
@@ -270,9 +298,16 @@
 
 
 #content #about-me {
-    display: inline-block;
-    width: 30%;
+    width: 100%;
 
+
+}
+
+.about-me-decript{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 #content #about-me h3 {
@@ -288,14 +323,18 @@
     object-fit: cover;
     margin-bottom: 40px;
 }
-
+#content #about-me .about-me-img-item{
+    width: 25%;
+    padding: 10px;
+    margin-top: auto;
+}
 #content #about-me .about-me-img img {
-    object-position: 50% 10%;
-    width: 49%;
-    height: 49%;
+    width: 100%;
 }
 
 #content #about-me .about-me-img {
+    display: flex;
+    padding: auto;
     width: 100%;
     height: 50%;
 }
@@ -303,10 +342,10 @@
 #content #about-me span {
     position: relative;
     bottom: 20px;
-    width: 100%;
     height: 100%;
     font-family: "Rubik", sans-serif;
     font-size: 17px;
+    padding: 20px;
 }
 
 #content #about-me button,
@@ -382,11 +421,11 @@
     width: 100%;
     display: inline-block;
     display: grid;
-    grid-template-columns: 400px 400px 500px;
+    padding: 20px;
+    grid-template-columns: 2fr 2fr 3fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "h1 h2 h3"
         "h4 h5 h3";
-    margin: 20px;
 }
 
 .tour-news-item:nth-child(1) {
@@ -441,20 +480,16 @@ p {
     display: inline-block;
     width: 100%;
     height: 100%;
+    padding-left: 30px;
 }
 
 @media screen and (min-width: 1377px) {
-    #feature-post {
-        margin-left: 20%;
-    }
+
 
     #content #about-me {
-        margin-left: 3%;
-        width: 40%;
     }
 
     #content #news-content {
-        width: 50%;
 
     }
 }
@@ -493,6 +528,7 @@ p {
 
 #feature-post .the-best a {
     text-decoration: none;
+    display: block;
     color: black;
 }
 
@@ -627,12 +663,41 @@ p {
         padding: 0.5em 0.8em;
     }
 
-    #content #about-me {
-        width: 29%;
+    
+
+    #tour-news{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "h1 h2"
+        "h3 h4"
+        "h5 h5";
+    }
+    #feature-post .the-best{
+        width: 100%;
+    }
+    #feature-post .the-best a{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    #feature-post .the-best img{
+        width: 100%;
+    }
+    .tour-news-item:nth-child(1) {
+        grid-area: h1;
+    }
+    .tour-news-item:nth-child(2) {
+        grid-area: h2;
+    }
+    .tour-news-item:nth-child(3) {
+        grid-area: h3;
+    }
+    .tour-news-item:nth-child(4) {
+        grid-area: h4;
     }
 
     #feature-post {
-        display: none;
+        grid-area: h5;
     }
 
     .tour-news-item {
@@ -643,6 +708,7 @@ p {
         display: none !important;
     }
 }
+
 
 /* mobile */
 @media screen and (max-width: 46.1875em) {
