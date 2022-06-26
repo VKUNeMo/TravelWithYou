@@ -276,9 +276,9 @@ a {
     color: #f5d9d9;
 }
 
-#nav-icon a{
+#nav-icon a {
     color: black;
-    font-size:24px;
+    font-size: 24px;
     display: none;
 }
 
@@ -563,130 +563,104 @@ a {
     color: rgb(29, 155, 240);
 }
 
-
-.container-form {
-    /* transform: translate(-50%, -50%); */
+.cover-book-form {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 10000;
+    z-index: 100000;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.book-form {
-    position: relative;
-    font-size: 20px;
-    height: 80%;
+#book-form {
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#content-form {
     width: 50%;
-    padding: 20px;
-    border-radius: 1em;
+    height: 100%;
+    float: left;
     background-image: url(../img/phuquoc-popular.jpg);
     background-size: cover;
-    background-position: left;
+    border-radius: 20px;
+}
+
+#input-form {
+    width: 50%;
+    height: 100%;
+    float: left;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fa303a;
-    text-shadow: -1px -1px 0px #333;
-    box-shadow: 5px #333;
+    background-color: white;
+    border-radius: 20px;
 }
 
-.book-form>.title {
-    text-align: center;
-    font-family: "Nothing You Could Do", cursive;
-    font-size: 80px;
-    font-weight: 400;
-    text-shadow: -3px -2px 0px #333;
+#input-form h3 {
+    font-size: 3em;
+    font-family: "Rubik",
+        sans-serif;
+    margin-bottom: 0.2em;
 }
 
-.form div {
-    margin: 2px;
-    text-align: left;
-}
-
-.form span {
-    margin: 10px 15px;
-}
-
-.form-input {
-    margin: 5px 15px;
-    border: 1px solid #040E27;
-}
-
-.form .form-input,
-.form .people-input {
+#input-form span {
+    font-family: "Rubik",
+        sans-serif;
     font-size: 1em;
-    border-radius: 0.7em;
-    display: flex;
-    height: 2em;
-    width: 21.9em;
+    padding: 1em 0;
+    margin: 0 1em;
 }
 
-.form-left {
-    font-size: 27px;
-    color: #333;
+#input-form input {
+    font-size: 1em;
+    width: 80%;
+    height: 2em;
+    display: block;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    margin-left: 1em;
+}
+
+form {
+    background-color: aliceblue;
+    width: 65%;
+    height: 90%;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 3em;
+    box-shadow: 5px 5px #888888;
+    position: relative;
 }
 
 .confirm {
+    display: block;
+    width: 100%;
+    height: 3em;
+    background-color: #1ec6b6;
+    box-shadow: 5px 5px #888888;
     position: absolute;
     bottom: 0;
-    transform: translate(-50%, -50%);
-    appearance: button;
-    background-color: #1899D6;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 13px 16px;
-    text-align: center;
-    text-transform: uppercase;
-    touch-action: manipulation;
-    /* transform: translateZ(0); */
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: 40%;
+
 }
 
 .confirm:hover {
-    -webkit-filter: brightness(1.1);
+    cursor: pointer;
+    box-shadow: 0 0;
+    opacity: 0.9;
 }
 
-.parent {
-    display: inline-block;
-}
-
-.child {
-    display: inline-block;
-}
-
-.form .people-input {
-    width: 10em;
-    height: 2em;
-}
-
-#total_number {
-    width: 10em;
-    height: 2em;
-    font-size: 1em;
-    border-radius: 0.7em;
+.title-form {
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
 }
 
 #signup {
@@ -720,46 +694,54 @@ a {
 /* Tablet width 820 */
 @media screen and (max-width: 1150px) {
     .logo img {
-        width: 190px;   
+        width: 190px;
     }
+
     #header #content_header {
         width: 100vw
     }
+
     #content_header>.nav {
         font-size: 14px;
         margin-right: 10px;
     }
+
     #content_header .nav li {
         padding: 10px;
     }
+
     .contact span {
         display: none;
     }
+
     #header #content_header .search-icon a {
         top: 20px;
         right: 118px;
         /* font-size: 14px; */
     }
+
     #header #content_header .search-icon input {
         opacity: 1;
         right: 2px;
         width: 161px;
         box-sizing: border-box;
-        
-    padding: 14px 0 14px 52px;
+
+        padding: 14px 0 14px 52px;
 
         font-size: 11px;
     }
+
     .contact .loginBtn {
         font-size: 14px;
     }
-/* Footer */
+
+    /* Footer */
     .contact-insta-item {
         display: none !important;
     }
 
     #footer {
-        height: auto; 
+        height: auto;
         padding: 20px 0;
         font-size: 14px;
     }
@@ -772,18 +754,21 @@ a {
         height: auto;
         width: 240px;
         margin: 0;
-    }   
+    }
+
     #footer>.contact-popular li {
         margin: 0;
     }
 
-    
+
 }
+
 /* toggle class */
 .transform_180 {
-    transform:  rotate(180deg);
-    
+    transform: rotate(180deg);
+
 }
+
 .active {
     transform: translateX(0) !important;
 }
@@ -792,18 +777,22 @@ a {
     #content_header>.nav {
         display: none;
     }
+
     #nav-icon {
         display: block;
         padding: 0 30px;
         transition: all 0.5s ease;
     }
+
     #nav-icon a {
         display: block;
     }
+
     #nav-bar a:hover {
         background-color: #f1f1f1a8;
         color: #00c961;
     }
+
     #nav-bar {
         display: block;
         position: absolute;
@@ -814,9 +803,11 @@ a {
         transform: translateX(-120%);
         transition: all 0.5s ease;
     }
+
     #nav-bar .sub_nav {
         display: none;
     }
+
     #nav-bar li:nth-child(4):hover .sub_nav {
         display: block;
         -webkit-transition: all 400ms ease;
@@ -831,51 +822,60 @@ a {
         color: rgba(0, 0, 0);
         padding: 16px 55px;
     }
+
     #header .search-icon {
         display: none;
     }
+
     #header>#content_header {
         justify-content: space-between;
     }
+
     .contact .loginBtn {
         margin-right: 20px;
     }
+
     #header li.search-icon {
         display: block;
         position: relative;
     }
-    
+
     #header #content_header .search-icon input {
         /* top: 272px;  */
         right: 18px;
     }
+
     #header #content_header .search-icon a {
         /* top: 272px;  */
         right: 134px;
     }
-    
+
 }
+
 /* footer */
 @media screen and (max-width: 800px) {
     #footer {
         flex-direction: column;
     }
-    #footer>.contact-img img{
-        height:150px !important;
+
+    #footer>.contact-img img {
+        height: 150px !important;
         object-fit: cover;
     }
+
     #footer>.contact-popular {
         display: none;
     }
+
     #footer>.contact-item {
         text-align: center;
         font-size: 16px;
     }
 }
 
-@media screen and (max-width: 361px)  {
+@media screen and (max-width: 361px) {
     #nav-icon {
         padding: 15px;
     }
-    
+
 }

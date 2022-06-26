@@ -539,58 +539,90 @@
 
         </div>
     </div>
-    <script src="../assets/js/loginvsload.js"></script>
     <script>
         const buts = document.querySelectorAll(".book-now button ");
         buts.forEach(but => {
             but.addEventListener("click", bookTour);
             function bookTour(event) {
                 console.log(event.target);
-                const template1 = ` <form>
-                <div class="container-form">
-                <div class="book-form">
-                    <div class="title">
-                        <h3>BOOK NOW</h3>
-                    </div>
-                    <div class="form">
-                        <div class="name">
-                            <span class="form-left">Name </span>
-                            <input type="text" placeholder="Name" class="form-input">
+                const template1 = ` <div class="cover-book-form">
+            <div id="book-form">
+                <div id="content-form">
+    
+                </div>
+                <div id="input-form">
+    
+                    <form action="">
+                        <div class="title-form">
+                            <h3>Book Now</h3>
                         </div>
-                        <div class="number">
-                            <span class="form-left">Number</span>
-                            <input type="number" placeholder="Number" class="form-input">
+                        <div>
+                        <span>Name*</span>
+                        <input type="text" placeholder="Nguyen Van A" id="name-input">
+                        <span id="loi-ten" class="loi"></span>
                         </div>
-                        <div class="address">
-                            <span class="form-left">Address</span>
-                            <input type="text" name="" id="" placeholder="Address" class="form-input">
+                        <div>
+                        <span>Number phone*</span>
+                        <input type="number" placeholder="Number phone" id="phone-input">
+                         <span id="loi-sdt" class="loi"></span>
+                         </div>
+                         <div>
+                        <span>Address*</span>
+                        <input type="text" placeholder="Street/Village-Ward/Commune-City/District" id="address-input">
+                        <span id="loi-dia-chi" class="loi"></span>
                         </div>
-                        <div class="people">
-                            <div class="parent">
-                                <span class="form-left">Adults</span>
-                                <input type="number" placeholder=" 200$ / 1 people" class="people-input">
-                            </div>
-                            <div class="child">
-                                <span class="form-left">Child</span>
-                                <input type="number" placeholder="150$ / 1 people" class="people-input">
-                            </div>
+                        <div>
+                        <span>Adult*</span>
+                        <input type="number" placeholder="200$/ 1 people" id="adult-input" class="people-input">
+                        <span id="loi-so-luong"> </span>
                         </div>
-                        <div class="book-button" style="text-align:center ;">
-                            <button type="button" class="confirm" role="button">Confirm</button>
-                        </div>
-                    </div>
+                        <span>Child</span>
+                        <input type="number" placeholder="150$/ 1 people" id="child-input" class="people-input">
+                        <span style="display:inline-block;">ToTal</span>
+                        <input type="text" id="total-number" placeholder="Total" style="width:20%;display: inline-block;margin-left: 10%;">
+                        <button class="confirm" type="button" onclick="return Total()" >
+                            Confirm
+                        </button>
+                    </form>
                 </div>
             </div>
-            </form>`
+        </div>`
                 document.body.insertAdjacentHTML("beforeend", template1);
+
             }
         }
         )
         document.body.addEventListener("click", function (e) {
-            if (e.target.matches(".container-form")) {
+            if (e.target.matches(".cover-book-form")) {
                 e.target.parentNode.removeChild(e.target);
+
             }
         });
+    </script>
+    <script src="../assets/js/loginvsload.js"></script>
+    <script>
+        function Total() {
+            let check = true;
+            //check name
+            let name = document.getElementById("name-input").value;
+            if (name.length === 0) {
+                document.getElementById('loi-ten').innerHTML = 'The input of name do not emty';
+                document.getElementById('loi-ten').style.color = 'red';
+                check = false;
+            }
+            //check phone number
+            let phone = document.getElementById("phone-input").value;
+            if (phone.length === 0) {
+                document.getElementById('loi-sdt').innerHTML = 'The input of phone number do not emty';
+                document.getElementById('loi-sdt').style.color = 'red';
+                check = false;
+            }
+            var people = document.getElementsByClassName("people-input")[0].value;
+            var child = document.getElementsByClassName("people-input")[1].value;
+            parseInt(people);
+            document.getElementById("total-number").value = people * 200 + child * 150 + 500 + "$";
+        }
+
     </script>
 </body>
 
