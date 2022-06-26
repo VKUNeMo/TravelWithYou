@@ -174,11 +174,11 @@
     display: none;
 }
 
-.social{
+.social-contact{
     padding: 10px;
     font-size: 40px;
 }
-.social span
+.social-contact span
 {
     margin-left: 10px;
     cursor: pointer;
@@ -201,7 +201,6 @@
 }
 #tour-include,#tour-not-include,#tour-condition-cancel{
     font-size: 18px;
-    overflow: hidden;
 }
 #tour-include
 ,#tour-not-include
@@ -320,14 +319,18 @@
 
 .slider-item{
     box-shadow: 2px 5px 3px rgb(185, 181, 181);
-    padding-top: 500px;
+    height: 500px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
 }
-.tour-sliders #item1 {
+
+.slider-item img {
+    height: 100%;
+}
+/* .tour-sliders #item1 {
     background-image: url(https://res.cloudinary.com/wonder-place/image/upload/v1629099390/image/w0goopi0a6dbhqi9aac3.jpg);
 }
 .tour-sliders #item2 {
@@ -344,7 +347,7 @@
 }
 .tour-sliders #item6 {
     background-image: url(https://banahills.sunworld.vn/wp-content/uploads/2018/08/lam-mua-lam-gio-tai-viet-nam-chua-du-cau-vang-tiep-tuc-chinh-phuc-the-gioi-1206-768x432.jpg);
-}
+} */
 .tour-sliders {
    margin-top: 30px;
 
@@ -457,4 +460,8 @@
 }
 .slick-initialized .slick-slide{
     margin: 0 10px;
+}
+
+#login  p,#login  button{
+    margin: unset;
 }
